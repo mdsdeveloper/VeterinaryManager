@@ -1,0 +1,15 @@
+C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\VeterinaryManagerGen\VeterinaryManagerGenNHibernate\bin\Debug\hibernate.cfg.xml
+C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\VeterinaryManagerGen\VeterinaryManagerGenNHibernate\bin\Debug\VeterinaryManagerGenNHibernate.dll.config
+C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\VeterinaryManagerGen\VeterinaryManagerGenNHibernate\bin\Debug\VeterinaryManagerGenNHibernate.dll
+C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\VeterinaryManagerGen\VeterinaryManagerGenNHibernate\bin\Debug\VeterinaryManagerGenNHibernate.pdb
+C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\VeterinaryManagerGen\VeterinaryManagerGenNHibernate\bin\Debug\Castle.DynamicProxy2.dll
+C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\VeterinaryManagerGen\VeterinaryManagerGenNHibernate\bin\Debug\LinFu.DynamicProxy.dll
+C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\VeterinaryManagerGen\VeterinaryManagerGenNHibernate\bin\Debug\NHibernate.ByteCode.Castle.dll
+C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\VeterinaryManagerGen\VeterinaryManagerGenNHibernate\bin\Debug\NHibernate.ByteCode.LinFu.dll
+C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\VeterinaryManagerGen\VeterinaryManagerGenNHibernate\bin\Debug\NHibernate.dll
+C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\VeterinaryManagerGen\VeterinaryManagerGenNHibernate\bin\Debug\Iesi.Collections.dll
+C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\VeterinaryManagerGen\VeterinaryManagerGenNHibernate\bin\Debug\Antlr3.Runtime.dll
+C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\VeterinaryManagerGen\VeterinaryManagerGenNHibernate\bin\Debug\log4net.dll
+C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\VeterinaryManagerGen\VeterinaryManagerGenNHibernate\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\VeterinaryManagerGen\VeterinaryManagerGenNHibernate\obj\Debug\VeterinaryManagerGenNHibernate.dll
+C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\VeterinaryManagerGen\VeterinaryManagerGenNHibernate\obj\Debug\VeterinaryManagerGenNHibernate.pdb

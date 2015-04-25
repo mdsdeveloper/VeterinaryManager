@@ -19,8 +19,8 @@ namespace Presentacion
 
         private void bIngresar_Click(object sender, EventArgs e)
         {
-            UsuarioCEN usuarioCEN = null;
-            usuarioCEN = new UsuarioCEN();
+            UsuariosCEN usuarioCEN = null;
+            usuarioCEN = new UsuariosCEN();
 
             if (tbUsuario.Text != null && tbContraseña.Text != null)
             {

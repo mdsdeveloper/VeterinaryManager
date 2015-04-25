@@ -1,0 +1,149 @@
+
+using System;
+
+namespace VeterinaryManagerGenNHibernate.EN.VeterinaryManager
+{
+public partial class ClientesEN
+{
+/**
+ *
+ */
+
+private string nombre;
+
+/**
+ *
+ */
+
+private string apellido;
+
+/**
+ *
+ */
+
+private string sexo;
+
+/**
+ *
+ */
+
+private string telefono;
+
+/**
+ *
+ */
+
+private string direccion;
+
+/**
+ *
+ */
+
+private string dni;
+
+/**
+ *
+ */
+
+private System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN> citas;
+
+
+
+
+
+public virtual string Nombre {
+        get { return nombre; } set { nombre = value;  }
+}
+
+
+public virtual string Apellido {
+        get { return apellido; } set { apellido = value;  }
+}
+
+
+public virtual string Sexo {
+        get { return sexo; } set { sexo = value;  }
+}
+
+
+public virtual string Telefono {
+        get { return telefono; } set { telefono = value;  }
+}
+
+
+public virtual string Direccion {
+        get { return direccion; } set { direccion = value;  }
+}
+
+
+public virtual string Dni {
+        get { return dni; } set { dni = value;  }
+}
+
+
+public virtual System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN> Citas {
+        get { return citas; } set { citas = value;  }
+}
+
+
+
+
+
+public ClientesEN()
+{
+        citas = new System.Collections.Generic.List<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN>();
+}
+
+
+
+public ClientesEN(string dni, string nombre, string apellido, string sexo, string telefono, string direccion, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN> citas)
+{
+        this.init (dni, nombre, apellido, sexo, telefono, direccion, citas);
+}
+
+
+public ClientesEN(ClientesEN clientes)
+{
+        this.init (clientes.Dni, clientes.Nombre, clientes.Apellido, clientes.Sexo, clientes.Telefono, clientes.Direccion, clientes.Citas);
+}
+
+private void init (string dni, string nombre, string apellido, string sexo, string telefono, string direccion, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN> citas)
+{
+        this.Dni = dni;
+
+
+        this.Nombre = nombre;
+
+        this.Apellido = apellido;
+
+        this.Sexo = sexo;
+
+        this.Telefono = telefono;
+
+        this.Direccion = direccion;
+
+        this.Citas = citas;
+}
+
+public override bool Equals (object obj)
+{
+        if (obj == null)
+                return false;
+        ClientesEN t = obj as ClientesEN;
+        if (t == null)
+                return false;
+        if (Dni.Equals (t.Dni))
+                return true;
+        else
+                return false;
+}
+
+public override int GetHashCode ()
+{
+        int hash = 13;
+
+        hash += this.Dni.GetHashCode ();
+        return hash;
+}
+}
+}

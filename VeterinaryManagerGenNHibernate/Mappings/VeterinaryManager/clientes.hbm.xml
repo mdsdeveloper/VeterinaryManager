@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="VeterinaryManagerGenNHibernate"
+		                   namespace="VeterinaryManagerGenNHibernate.EN.VeterinaryManager">
+			<class name="ClientesEN" table="[Clientes]">
+						<id name="Dni" column="[dniClientes]"/>
+					<property name="Nombre" type="string"> 
+						<column name="[nombre]"  not-null="true"/>
+					</property>
+					<property name="Apellido" type="string"> 
+						<column name="[apellido]"  not-null="true"/>
+					</property>
+					<property name="Sexo" type="string"> 
+						<column name="[sexo]"  not-null="true"/>
+					</property>
+					<property name="Telefono" type="string"> 
+						<column name="[telefono]"  not-null="true"/>
+					</property>
+					<property name="Direccion" type="string"> 
+						<column name="[direccion]"  not-null="true"/>
+					</property>
+			
+			
+			
+			
+			
+			
+			
+		  			
+						<bag name="Citas" >
+							<key>
+								<column name="[FK_dniClientes_idClientes]"/>
+					      	</key>
+							<one-to-many class="VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN"/>
+					    </bag>
+					
+					
+					
+					
+					
+					
+					
+					
+		
+		  </class>
+		  
+		  <query name="ClientesENReadAllHQL">from ClientesEN</query>
+		  <query name="ClientesENdame_por_nombreHQL"><![CDATA[select cli FROM ClientesEN as cli where cli.Nombre =:p_nombre]]></query>
+		  <query name="ClientesENdame_por_citasHQL"><![CDATA[select cli FROM ClientesEN as cli inner join cli.Citas as citas where citas.Fecha =:p_fecha]]></query>
+		</hibernate-mapping>
+	

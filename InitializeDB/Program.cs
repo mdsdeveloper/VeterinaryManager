@@ -25,7 +25,7 @@ static void Main (string[] args)
                         CreateDB.Create ("VeterinaryManagerGenNHibernate", "nhibernateUser", "nhibernatePass");
                         var cfg = new Configuration ();
                         cfg.Configure ();
-                        cfg.AddAssembly (typeof(UsuarioEN).Assembly);
+                        cfg.AddAssembly (typeof(UsuariosEN).Assembly);
                         new SchemaExport (cfg).Execute (true, true, false);
                         System.Console.WriteLine ("-----------------------------");
                         System.Console.WriteLine ("Database schema created successfully");

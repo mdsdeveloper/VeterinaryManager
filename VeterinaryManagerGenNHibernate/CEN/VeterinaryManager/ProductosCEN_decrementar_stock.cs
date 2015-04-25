@@ -12,20 +12,20 @@ using VeterinaryManagerGenNHibernate.CAD.VeterinaryManager;
 
 namespace VeterinaryManagerGenNHibernate.CEN.VeterinaryManager
 {
-public partial class ProductoCEN
+public partial class ProductosCEN
 {
 public void Decrementar_stock (int p_oid, int p_cantidad)
 {
-        /*PROTECTED REGION ID(VeterinaryManagerGenNHibernate.CEN.VeterinaryManager_Producto_decrementar_stock) ENABLED START*/
-
-        ProductoEN productoEN = null;
+        /*PROTECTED REGION ID(VeterinaryManagerGenNHibernate.CEN.VeterinaryManager_Productos_decrementar_stock) ENABLED START*/
+        ProductosEN productoEN = null;
 
         try
         {
-                productoEN = _IProductoCAD.ReadOID (p_oid);
+                productoEN = _IProductosCAD.ReadOID (p_oid);
                 if (p_cantidad != null) {
                         if (productoEN.Stock >= p_cantidad) {
                                 productoEN.Stock -= p_cantidad;
+                                _IProductosCAD.Modify (productoEN);
                                 Console.WriteLine ("Se ha descontado correctamente");
                         }
                         else{

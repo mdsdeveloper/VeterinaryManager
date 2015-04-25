@@ -12,22 +12,22 @@ using VeterinaryManagerGenNHibernate.CAD.VeterinaryManager;
 
 namespace VeterinaryManagerGenNHibernate.CEN.VeterinaryManager
 {
-public partial class ProductoCEN
+public partial class ProductosCEN
 {
 public void Incrementar_stock (int p_oid, int p_cantidad)
 {
-        /*PROTECTED REGION ID(VeterinaryManagerGenNHibernate.CEN.VeterinaryManager_Producto_incrementar_stock) ENABLED START*/
-
-        ProductoEN productoEN = null;
+        /*PROTECTED REGION ID(VeterinaryManagerGenNHibernate.CEN.VeterinaryManager_Productos_incrementar_stock) ENABLED START*/
+        ProductosEN productoEN = null;
 
         try
         {
                 if (p_cantidad != null) {
-                        productoEN = _IProductoCAD.ReadOID (p_oid);
+                        productoEN = _IProductosCAD.ReadOID (p_oid);
                         productoEN.Stock += p_cantidad;
-                        _IProductoCAD.Modify (productoEN);
+                        _IProductosCAD.Modify (productoEN);
                 }
-        }catch (Exception ex)
+        }
+        catch (Exception ex)
         {
                 ex.Message.ToString ();
         }

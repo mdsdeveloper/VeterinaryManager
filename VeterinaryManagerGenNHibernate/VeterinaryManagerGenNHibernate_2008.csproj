@@ -89,17 +89,25 @@
 	
 	<Compile Include="CAD\BasicCAD.cs"/>
 	
-	<Compile Include="EN\VeterinaryManager\UsuarioEN.cs" />
-	<Compile Include="CEN\VeterinaryManager\UsuarioCEN.cs" />
-	<Compile Include="CAD\VeterinaryManager\IUsuarioCAD.cs" />
-	<Compile Include="CAD\VeterinaryManager\UsuarioCAD.cs" />
-			<Compile Include="CEN\VeterinaryManager\UsuarioCEN_Login.cs" />
-	<Compile Include="EN\VeterinaryManager\ProductoEN.cs" />
-	<Compile Include="CEN\VeterinaryManager\ProductoCEN.cs" />
-	<Compile Include="CAD\VeterinaryManager\IProductoCAD.cs" />
-	<Compile Include="CAD\VeterinaryManager\ProductoCAD.cs" />
-			<Compile Include="CEN\VeterinaryManager\ProductoCEN_Incrementar_stock.cs" />
-			<Compile Include="CEN\VeterinaryManager\ProductoCEN_Decrementar_stock.cs" />
+	<Compile Include="EN\VeterinaryManager\UsuariosEN.cs" />
+	<Compile Include="CEN\VeterinaryManager\UsuariosCEN.cs" />
+	<Compile Include="CAD\VeterinaryManager\IUsuariosCAD.cs" />
+	<Compile Include="CAD\VeterinaryManager\UsuariosCAD.cs" />
+			<Compile Include="CEN\VeterinaryManager\UsuariosCEN_Login.cs" />
+	<Compile Include="EN\VeterinaryManager\ProductosEN.cs" />
+	<Compile Include="CEN\VeterinaryManager\ProductosCEN.cs" />
+	<Compile Include="CAD\VeterinaryManager\IProductosCAD.cs" />
+	<Compile Include="CAD\VeterinaryManager\ProductosCAD.cs" />
+			<Compile Include="CEN\VeterinaryManager\ProductosCEN_Incrementar_stock.cs" />
+			<Compile Include="CEN\VeterinaryManager\ProductosCEN_Decrementar_stock.cs" />
+	<Compile Include="EN\VeterinaryManager\ClientesEN.cs" />
+	<Compile Include="CEN\VeterinaryManager\ClientesCEN.cs" />
+	<Compile Include="CAD\VeterinaryManager\IClientesCAD.cs" />
+	<Compile Include="CAD\VeterinaryManager\ClientesCAD.cs" />
+	<Compile Include="EN\VeterinaryManager\CitasEN.cs" />
+	<Compile Include="CEN\VeterinaryManager\CitasCEN.cs" />
+	<Compile Include="CAD\VeterinaryManager\ICitasCAD.cs" />
+	<Compile Include="CAD\VeterinaryManager\CitasCAD.cs" />
 	
 	
 
@@ -115,8 +123,10 @@
 		  </ItemGroup>
 		  <ItemGroup>
 		  
-	<EmbeddedResource Include="Mappings\VeterinaryManager\usuario.hbm.xml" />
-	<EmbeddedResource Include="Mappings\VeterinaryManager\producto.hbm.xml" />
+	<EmbeddedResource Include="Mappings\VeterinaryManager\usuarios.hbm.xml" />
+	<EmbeddedResource Include="Mappings\VeterinaryManager\productos.hbm.xml" />
+	<EmbeddedResource Include="Mappings\VeterinaryManager\clientes.hbm.xml" />
+	<EmbeddedResource Include="Mappings\VeterinaryManager\citas.hbm.xml" />
 	
 	
 

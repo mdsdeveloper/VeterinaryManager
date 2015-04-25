@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="VeterinaryManagerGenNHibernate"
+		                   namespace="VeterinaryManagerGenNHibernate.EN.VeterinaryManager">
+			<class name="UsuariosEN" table="[Usuarios]">
+						<id name="Contraseña" column="[contraseñaUsuarios]"/>
+					<property name="Nombre" type="string"> 
+						<column name="[nombre]"  not-null="true"/>
+					</property>
+			
+			
+					
+					
+		
+		  </class>
+		  
+		  <query name="UsuariosENReadAllHQL">from UsuariosEN</query>
+		</hibernate-mapping>
+	

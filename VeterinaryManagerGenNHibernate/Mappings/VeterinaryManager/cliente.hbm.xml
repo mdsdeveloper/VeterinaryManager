@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="VeterinaryManagerGenNHibernate"
+		                   namespace="VeterinaryManagerGenNHibernate.EN.VeterinaryManager">
+			<class name="ClienteEN" table="[Cliente]">
+						<id name="Dni" column="[dniCliente]"/>
+					<property name="Nombre" type="string"> 
+						<column name="[nombre]"  not-null="true"/>
+					</property>
+					<property name="Apellido" type="string"> 
+						<column name="[apellido]"  not-null="true"/>
+					</property>
+					<property name="Sexo" type="string"> 
+						<column name="[sexo]"  not-null="true"/>
+					</property>
+					<property name="Telefono" type="string"> 
+						<column name="[telefono]"  not-null="true"/>
+					</property>
+					<property name="Direccion" type="string"> 
+						<column name="[direccion]"  not-null="true"/>
+					</property>
+			
+			
+			
+			
+			
+			
+					
+					
+					
+					
+					
+					
+		
+		  </class>
+		  
+		  <query name="ClienteENReadAllHQL">from ClienteEN</query>
+		  <query name="ClienteENdame_por_nombreHQL"><![CDATA[select cli FROM ClienteEN as cli where cli.Nombre =: p_nombre]]></query>
+		</hibernate-mapping>
+	

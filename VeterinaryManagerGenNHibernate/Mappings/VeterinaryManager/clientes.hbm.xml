@@ -19,6 +19,9 @@
 					<property name="Direccion" type="string"> 
 						<column name="[direccion]"  not-null="true"/>
 					</property>
+					<property name="Fecha" type="date"> 
+						<column name="[fecha]"  not-null="true"/>
+					</property>
 			
 			
 			
@@ -33,6 +36,8 @@
 					      	</key>
 							<one-to-many class="VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN"/>
 					    </bag>
+					
+			
 					
 					
 					

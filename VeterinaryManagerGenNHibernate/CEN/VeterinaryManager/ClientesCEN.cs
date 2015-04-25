@@ -32,7 +32,7 @@ public IClientesCAD get_IClientesCAD ()
         return this._IClientesCAD;
 }
 
-public string Nuevo_cliente (string p_nombre, string p_apellido, string p_sexo, string p_telefono, string p_direccion, string p_dni)
+public string Nuevo_cliente (string p_nombre, string p_apellido, string p_sexo, string p_telefono, string p_direccion, string p_dni, Nullable<DateTime> p_fecha)
 {
         ClientesEN clientesEN = null;
         string oid;
@@ -51,13 +51,15 @@ public string Nuevo_cliente (string p_nombre, string p_apellido, string p_sexo, 
 
         clientesEN.Dni = p_dni;
 
+        clientesEN.Fecha = p_fecha;
+
         //Call to ClientesCAD
 
         oid = _IClientesCAD.Nuevo_cliente (clientesEN);
         return oid;
 }
 
-public void Modify (string p_Clientes_OID, string p_nombre, string p_apellido, string p_sexo, string p_telefono, string p_direccion)
+public void Modify (string p_Clientes_OID, string p_nombre, string p_apellido, string p_sexo, string p_telefono, string p_direccion, Nullable<DateTime> p_fecha)
 {
         ClientesEN clientesEN = null;
 
@@ -69,6 +71,7 @@ public void Modify (string p_Clientes_OID, string p_nombre, string p_apellido, s
         clientesEN.Sexo = p_sexo;
         clientesEN.Telefono = p_telefono;
         clientesEN.Direccion = p_direccion;
+        clientesEN.Fecha = p_fecha;
         //Call to ClientesCAD
 
         _IClientesCAD.Modify (clientesEN);

@@ -65,6 +65,7 @@
             this.cobroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cobroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel8 = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,7 +77,8 @@
             this.toolStripLabel3,
             this.toolStripLabel4,
             this.toolStripLabel5,
-            this.toolStripLabel6});
+            this.toolStripLabel6,
+            this.toolStripLabel8});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(873, 25);
@@ -173,6 +175,7 @@
             this.clienteToolStripMenuItem1.Name = "clienteToolStripMenuItem1";
             this.clienteToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.clienteToolStripMenuItem1.Text = "Cliente";
+            this.clienteToolStripMenuItem1.Click += new System.EventHandler(this.clienteToolStripMenuItem1_Click);
             // 
             // animalToolStripMenuItem1
             // 
@@ -334,6 +337,12 @@
             this.toolStripLabel6.Size = new System.Drawing.Size(38, 22);
             this.toolStripLabel6.Text = "Cerrar";
             // 
+            // toolStripLabel8
+            // 
+            this.toolStripLabel8.Name = "toolStripLabel8";
+            this.toolStripLabel8.Size = new System.Drawing.Size(38, 22);
+            this.toolStripLabel8.Text = "Ayuda";
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -343,7 +352,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MenuPrincipal";
+            this.Text = "Menu Principal";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -390,6 +399,7 @@
         private System.Windows.Forms.ToolStripMenuItem productoToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem cobroToolStripMenuItem;
         private System.Windows.Forms.ToolStripLabel toolStripLabel6;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel8;
 
     }
 }

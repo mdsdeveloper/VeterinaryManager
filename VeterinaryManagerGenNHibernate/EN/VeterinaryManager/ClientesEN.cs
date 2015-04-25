@@ -47,6 +47,12 @@ private string dni;
 
 private System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN> citas;
 
+/**
+ *
+ */
+
+private Nullable<DateTime> fecha;
+
 
 
 
@@ -86,6 +92,11 @@ public virtual System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.E
 }
 
 
+public virtual Nullable<DateTime> Fecha {
+        get { return fecha; } set { fecha = value;  }
+}
+
+
 
 
 
@@ -96,18 +107,18 @@ public ClientesEN()
 
 
 
-public ClientesEN(string dni, string nombre, string apellido, string sexo, string telefono, string direccion, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN> citas)
+public ClientesEN(string dni, string nombre, string apellido, string sexo, string telefono, string direccion, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN> citas, Nullable<DateTime> fecha)
 {
-        this.init (dni, nombre, apellido, sexo, telefono, direccion, citas);
+        this.init (dni, nombre, apellido, sexo, telefono, direccion, citas, fecha);
 }
 
 
 public ClientesEN(ClientesEN clientes)
 {
-        this.init (clientes.Dni, clientes.Nombre, clientes.Apellido, clientes.Sexo, clientes.Telefono, clientes.Direccion, clientes.Citas);
+        this.init (clientes.Dni, clientes.Nombre, clientes.Apellido, clientes.Sexo, clientes.Telefono, clientes.Direccion, clientes.Citas, clientes.Fecha);
 }
 
-private void init (string dni, string nombre, string apellido, string sexo, string telefono, string direccion, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN> citas)
+private void init (string dni, string nombre, string apellido, string sexo, string telefono, string direccion, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN> citas, Nullable<DateTime> fecha)
 {
         this.Dni = dni;
 
@@ -123,6 +134,8 @@ private void init (string dni, string nombre, string apellido, string sexo, stri
         this.Direccion = direccion;
 
         this.Citas = citas;
+
+        this.Fecha = fecha;
 }
 
 public override bool Equals (object obj)

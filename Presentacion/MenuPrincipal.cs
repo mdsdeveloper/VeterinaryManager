@@ -20,5 +20,12 @@ namespace Presentacion
         {
 
         }
+
+        private void clienteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            InsertarClientes insertarCliente = new InsertarClientes();
+            insertarCliente.Visible = true;
+          //  this.Dispose(false);
+        }
     }
 }

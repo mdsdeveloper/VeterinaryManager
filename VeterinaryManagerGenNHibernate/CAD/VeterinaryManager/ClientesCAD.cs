@@ -98,6 +98,9 @@ public void Modify (ClientesEN clientes)
 
                 clientesEN.Direccion = clientes.Direccion;
 
+
+                clientesEN.Fecha = clientes.Fecha;
+
                 session.Update (clientesEN);
                 SessionCommit ();
         }
@@ -202,7 +205,7 @@ public System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.Veteri
         try
         {
                 SessionInitializeTransaction ();
-                //String sql = @"FROM ClientesEN self where select cli FROM ClientesEN as cli where cli.Nombre =: p_nombre";
+                //String sql = @"FROM ClientesEN self where select cli FROM ClientesEN as cli where cli.Nombre =:p_nombre";
                 //IQuery query = session.CreateQuery(sql);
                 IQuery query = (IQuery)session.GetNamedQuery ("ClientesENdame_por_nombreHQL");
                 query.SetParameter ("p_nombre", p_nombre);

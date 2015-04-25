@@ -113,11 +113,11 @@ public static void InitializeData ()
                  * //Define Album
                  * //VeterinaryManagerGenNHibernate.CEN.Mediaplayer.AlbumCEN albumCEN = new VeterinaryManagerGenNHibernate.CEN.Mediaplayer.AlbumCEN();
                  * //albumCEN.New_("Album 1", "This is a Album 1", artists, musicTracks);*/
-            UsuarioCEN usuarioCEN = new UsuarioCEN();
-           
-            usuarioCEN.New_("a", "a");
+                UsuarioCEN usuarioCEN = new UsuarioCEN ();
 
-            /*PROTECTED REGION END*/
+                usuarioCEN.Nuevo_usuario ("a", "a");
+
+                /*PROTECTED REGION END*/
         }
         catch (Exception ex)
         {

@@ -107,6 +107,12 @@
 	<Compile Include="CAD\VeterinaryManager\IUsuarioCAD.cs" />
 	<Compile Include="CAD\VeterinaryManager\UsuarioCAD.cs" />
 			<Compile Include="CEN\VeterinaryManager\UsuarioCEN_Login.cs" />
+	<Compile Include="EN\VeterinaryManager\ProductoEN.cs" />
+	<Compile Include="CEN\VeterinaryManager\ProductoCEN.cs" />
+	<Compile Include="CAD\VeterinaryManager\IProductoCAD.cs" />
+	<Compile Include="CAD\VeterinaryManager\ProductoCAD.cs" />
+			<Compile Include="CEN\VeterinaryManager\ProductoCEN_Incrementar_stock.cs" />
+			<Compile Include="CEN\VeterinaryManager\ProductoCEN_Decrementar_stock.cs" />
 	
 	
 
@@ -123,6 +129,7 @@
 		  <ItemGroup>
 		  
 	<EmbeddedResource Include="Mappings\VeterinaryManager\usuario.hbm.xml" />
+	<EmbeddedResource Include="Mappings\VeterinaryManager\producto.hbm.xml" />
 	
 	
 

@@ -11,26 +11,26 @@ using VeterinaryManagerGenNHibernate.Exceptions;
 
 namespace VeterinaryManagerGenNHibernate.CAD.VeterinaryManager
 {
-public partial class UsuarioCAD : BasicCAD, IUsuarioCAD
+public partial class ProductoCAD : BasicCAD, IProductoCAD
 {
-public UsuarioCAD() : base ()
-{
-}
-
-public UsuarioCAD(ISession sessionAux) : base (sessionAux)
+public ProductoCAD() : base ()
 {
 }
 
-
-
-public UsuarioEN ReadOIDDefault (string contraseña)
+public ProductoCAD(ISession sessionAux) : base (sessionAux)
 {
-        UsuarioEN usuarioEN = null;
+}
+
+
+
+public ProductoEN ReadOIDDefault (int id)
+{
+        ProductoEN productoEN = null;
 
         try
         {
                 SessionInitializeTransaction ();
-                usuarioEN = (UsuarioEN)session.Get (typeof(UsuarioEN), contraseña);
+                productoEN = (ProductoEN)session.Get (typeof(ProductoEN), id);
                 SessionCommit ();
         }
 
@@ -38,7 +38,7 @@ public UsuarioEN ReadOIDDefault (string contraseña)
                 SessionRollBack ();
                 if (ex is VeterinaryManagerGenNHibernate.Exceptions.ModelException)
                         throw ex;
-                throw new VeterinaryManagerGenNHibernate.Exceptions.DataLayerException ("Error in UsuarioCAD.", ex);
+                throw new VeterinaryManagerGenNHibernate.Exceptions.DataLayerException ("Error in ProductoCAD.", ex);
         }
 
 
@@ -47,17 +47,17 @@ public UsuarioEN ReadOIDDefault (string contraseña)
                 SessionClose ();
         }
 
-        return usuarioEN;
+        return productoEN;
 }
 
 
-public string Nuevo_usuario (UsuarioEN usuario)
+public int Nuevo_producto (ProductoEN producto)
 {
         try
         {
                 SessionInitializeTransaction ();
 
-                session.Save (usuario);
+                session.Save (producto);
                 SessionCommit ();
         }
 
@@ -65,7 +65,7 @@ public string Nuevo_usuario (UsuarioEN usuario)
                 SessionRollBack ();
                 if (ex is VeterinaryManagerGenNHibernate.Exceptions.ModelException)
                         throw ex;
-                throw new VeterinaryManagerGenNHibernate.Exceptions.DataLayerException ("Error in UsuarioCAD.", ex);
+                throw new VeterinaryManagerGenNHibernate.Exceptions.DataLayerException ("Error in ProductoCAD.", ex);
         }
 
 
@@ -74,19 +74,28 @@ public string Nuevo_usuario (UsuarioEN usuario)
                 SessionClose ();
         }
 
-        return usuario.Contraseña;
+        return producto.Id;
 }
 
-public void Modify (UsuarioEN usuario)
+public void Modify (ProductoEN producto)
 {
         try
         {
                 SessionInitializeTransaction ();
-                UsuarioEN usuarioEN = (UsuarioEN)session.Load (typeof(UsuarioEN), usuario.Contraseña);
+                ProductoEN productoEN = (ProductoEN)session.Load (typeof(ProductoEN), producto.Id);
 
-                usuarioEN.Nombre = usuario.Nombre;
+                productoEN.Nombre = producto.Nombre;
 
-                session.Update (usuarioEN);
+
+                productoEN.Descripcion = producto.Descripcion;
+
+
+                productoEN.Precio = producto.Precio;
+
+
+                productoEN.Stock = producto.Stock;
+
+                session.Update (productoEN);
                 SessionCommit ();
         }
 
@@ -94,7 +103,7 @@ public void Modify (UsuarioEN usuario)
                 SessionRollBack ();
                 if (ex is VeterinaryManagerGenNHibernate.Exceptions.ModelException)
                         throw ex;
-                throw new VeterinaryManagerGenNHibernate.Exceptions.DataLayerException ("Error in UsuarioCAD.", ex);
+                throw new VeterinaryManagerGenNHibernate.Exceptions.DataLayerException ("Error in ProductoCAD.", ex);
         }
 
 
@@ -103,13 +112,13 @@ public void Modify (UsuarioEN usuario)
                 SessionClose ();
         }
 }
-public void Destroy (string contraseña)
+public void Destroy (int id)
 {
         try
         {
                 SessionInitializeTransaction ();
-                UsuarioEN usuarioEN = (UsuarioEN)session.Load (typeof(UsuarioEN), contraseña);
-                session.Delete (usuarioEN);
+                ProductoEN productoEN = (ProductoEN)session.Load (typeof(ProductoEN), id);
+                session.Delete (productoEN);
                 SessionCommit ();
         }
 
@@ -117,7 +126,7 @@ public void Destroy (string contraseña)
                 SessionRollBack ();
                 if (ex is VeterinaryManagerGenNHibernate.Exceptions.ModelException)
                         throw ex;
-                throw new VeterinaryManagerGenNHibernate.Exceptions.DataLayerException ("Error in UsuarioCAD.", ex);
+                throw new VeterinaryManagerGenNHibernate.Exceptions.DataLayerException ("Error in ProductoCAD.", ex);
         }
 
 
@@ -127,14 +136,14 @@ public void Destroy (string contraseña)
         }
 }
 
-public UsuarioEN ReadOID (string contraseña)
+public ProductoEN ReadOID (int id)
 {
-        UsuarioEN usuarioEN = null;
+        ProductoEN productoEN = null;
 
         try
         {
                 SessionInitializeTransaction ();
-                usuarioEN = (UsuarioEN)session.Get (typeof(UsuarioEN), contraseña);
+                productoEN = (ProductoEN)session.Get (typeof(ProductoEN), id);
                 SessionCommit ();
         }
 
@@ -142,7 +151,7 @@ public UsuarioEN ReadOID (string contraseña)
                 SessionRollBack ();
                 if (ex is VeterinaryManagerGenNHibernate.Exceptions.ModelException)
                         throw ex;
-                throw new VeterinaryManagerGenNHibernate.Exceptions.DataLayerException ("Error in UsuarioCAD.", ex);
+                throw new VeterinaryManagerGenNHibernate.Exceptions.DataLayerException ("Error in ProductoCAD.", ex);
         }
 
 
@@ -151,20 +160,20 @@ public UsuarioEN ReadOID (string contraseña)
                 SessionClose ();
         }
 
-        return usuarioEN;
+        return productoEN;
 }
 
-public System.Collections.Generic.IList<UsuarioEN> ReadAll (int first, int size)
+public System.Collections.Generic.IList<ProductoEN> ReadAll (int first, int size)
 {
-        System.Collections.Generic.IList<UsuarioEN> result = null;
+        System.Collections.Generic.IList<ProductoEN> result = null;
         try
         {
                 SessionInitializeTransaction ();
                 if (size > 0)
-                        result = session.CreateCriteria (typeof(UsuarioEN)).
-                                 SetFirstResult (first).SetMaxResults (size).List<UsuarioEN>();
+                        result = session.CreateCriteria (typeof(ProductoEN)).
+                                 SetFirstResult (first).SetMaxResults (size).List<ProductoEN>();
                 else
-                        result = session.CreateCriteria (typeof(UsuarioEN)).List<UsuarioEN>();
+                        result = session.CreateCriteria (typeof(ProductoEN)).List<ProductoEN>();
                 SessionCommit ();
         }
 
@@ -172,7 +181,7 @@ public System.Collections.Generic.IList<UsuarioEN> ReadAll (int first, int size)
                 SessionRollBack ();
                 if (ex is VeterinaryManagerGenNHibernate.Exceptions.ModelException)
                         throw ex;
-                throw new VeterinaryManagerGenNHibernate.Exceptions.DataLayerException ("Error in UsuarioCAD.", ex);
+                throw new VeterinaryManagerGenNHibernate.Exceptions.DataLayerException ("Error in ProductoCAD.", ex);
         }
 
 

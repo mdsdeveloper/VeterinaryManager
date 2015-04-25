@@ -32,7 +32,7 @@ public IUsuarioCAD get_IUsuarioCAD ()
         return this._IUsuarioCAD;
 }
 
-public string New_ (string p_nombre, string p_contraseña)
+public string Nuevo_usuario (string p_nombre, string p_contraseña)
 {
         UsuarioEN usuarioEN = null;
         string oid;
@@ -45,7 +45,7 @@ public string New_ (string p_nombre, string p_contraseña)
 
         //Call to UsuarioCAD
 
-        oid = _IUsuarioCAD.New_ (usuarioEN);
+        oid = _IUsuarioCAD.Nuevo_usuario (usuarioEN);
         return oid;
 }
 

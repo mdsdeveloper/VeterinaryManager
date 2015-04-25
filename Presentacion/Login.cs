@@ -27,6 +27,8 @@ namespace Presentacion
                 if (usuarioCEN.Login(tbContraseña.Text, tbUsuario.Text) == true)
                 {
                     MessageBox.Show("Bienbenido a Veterinary Manager");
+                    MenuPrincipal menu = new MenuPrincipal();
+                    menu.Visible = true;
                     this.Dispose(false);
                 }
                 else

@@ -8,7 +8,7 @@ public partial interface IUsuarioCAD
 {
 UsuarioEN ReadOIDDefault (string contraseña);
 
-string New_ (UsuarioEN usuario);
+string Nuevo_usuario (UsuarioEN usuario);
 
 void Modify (UsuarioEN usuario);
 

@@ -27,5 +27,11 @@ namespace Presentacion
             insertarCliente.Visible = true;
           //  this.Dispose(false);
         }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditarCliente editar = new EditarCliente();
+            editar.Visible = true;
+        }
     }
 }

@@ -23,3 +23,4 @@ C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\VeterinaryManagerGen\Present
 C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\VeterinaryManagerGen\Presentacion\obj\x86\Debug\Presentacion.Login.resources
 C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\VeterinaryManagerGen\Presentacion\obj\x86\Debug\Presentacion.MenuPrincipal.resources
 C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\VeterinaryManagerGen\Presentacion\obj\x86\Debug\Presentacion.InsertarClientes.resources
+C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\VeterinaryManagerGen\Presentacion\obj\x86\Debug\Presentacion.EditarCliente.resources

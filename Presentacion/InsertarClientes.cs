@@ -27,7 +27,8 @@ namespace Presentacion
             ClientesCAD clienteCAD = new ClientesCAD();
             
             
-            if (clienteCAD.ReadOID(tbDni.Text) == null)            {
+            if (clienteCAD.ReadOID(tbDni.Text) == null) 
+            {
                 
                 if (tbNombre.Text != "" && tbApellidos.Text != "" && tbSexo.Text != "" && tbTelefono.Text != "" && tbDireccion.Text != "" && tbDni.Text != "" && tbFecha.Text != "")
                 {

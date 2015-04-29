@@ -32,7 +32,7 @@ namespace Presentacion
                     tbApellidos.Text = clienteCAD.ReadOID(tbDni.Text).Apellido;
                     tbNombre.Text = clienteCAD.ReadOID(tbDni.Text).Nombre;
                     tbDireccion.Text = clienteCAD.ReadOID(tbDni.Text).Direccion;
-                    tbSexo.Text = clienteCAD.ReadOID(tbDni.Text).Sexo;
+                    tbEmail.Text = clienteCAD.ReadOID(tbDni.Text).Email;
                     tbTelefono.Text = clienteCAD.ReadOID(tbDni.Text).Telefono;
                     tbFecha.Text = dia.ToString() ;
                     groupBox1.Visible = true;
@@ -60,11 +60,11 @@ namespace Presentacion
         {
             ClientesCEN clienteCEN = null;
             
-            if (tbNombre.Text != "" && tbApellidos.Text != "" && tbSexo.Text != "" && tbTelefono.Text != "" && tbDireccion.Text != "" && tbFecha.Text != "")
+            if (tbNombre.Text != "" && tbApellidos.Text != "" && tbEmail.Text != "" && tbTelefono.Text != "" && tbDireccion.Text != "" && tbFecha.Text != "")
             {
                 
                 clienteCEN = new ClientesCEN();
-                clienteCEN.Modify(tbDni.Text, tbNombre.Text, tbApellidos.Text, tbSexo.Text, tbTelefono.Text, tbDireccion.Text, dia);
+                clienteCEN.Modify(tbDni.Text, tbNombre.Text, tbApellidos.Text, tbEmail.Text, tbTelefono.Text, tbDireccion.Text, dia);
                 MessageBox.Show("Modificación correcta");
                 Limpiar();
                 tbDni.Enabled = true;
@@ -84,7 +84,7 @@ namespace Presentacion
         {
             tbNombre.Text = "";
             tbApellidos.Text = "";
-            tbSexo.Text = "";
+            tbEmail.Text = "";
             tbTelefono.Text = "";
             tbDireccion.Text = "";
             tbDni.Text = "";

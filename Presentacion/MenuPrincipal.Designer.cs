@@ -123,44 +123,44 @@
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // animalToolStripMenuItem
             // 
             this.animalToolStripMenuItem.Name = "animalToolStripMenuItem";
-            this.animalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.animalToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.animalToolStripMenuItem.Text = "Animal";
             // 
             // tratamientoToolStripMenuItem
             // 
             this.tratamientoToolStripMenuItem.Name = "tratamientoToolStripMenuItem";
-            this.tratamientoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tratamientoToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.tratamientoToolStripMenuItem.Text = "Tratamiento";
             // 
             // servicioToolStripMenuItem
             // 
             this.servicioToolStripMenuItem.Name = "servicioToolStripMenuItem";
-            this.servicioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.servicioToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.servicioToolStripMenuItem.Text = "Servicio";
             // 
             // citasToolStripMenuItem
             // 
             this.citasToolStripMenuItem.Name = "citasToolStripMenuItem";
-            this.citasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.citasToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.citasToolStripMenuItem.Text = "Cita";
             // 
             // productoToolStripMenuItem
             // 
             this.productoToolStripMenuItem.Name = "productoToolStripMenuItem";
-            this.productoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.productoToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.productoToolStripMenuItem.Text = "Producto";
             // 
             // cobroToolStripMenuItem1
             // 
             this.cobroToolStripMenuItem1.Name = "cobroToolStripMenuItem1";
-            this.cobroToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.cobroToolStripMenuItem1.Size = new System.Drawing.Size(143, 22);
             this.cobroToolStripMenuItem1.Text = "Cobro";
             // 
             // toolStripLabel3
@@ -353,7 +353,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menu Principal";
+            this.Text = "Veterinary Manager - Menu";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

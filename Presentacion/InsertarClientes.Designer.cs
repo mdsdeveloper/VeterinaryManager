@@ -34,7 +34,7 @@
             this.tbDni = new System.Windows.Forms.TextBox();
             this.tbDireccion = new System.Windows.Forms.TextBox();
             this.tbTelefono = new System.Windows.Forms.TextBox();
-            this.tbSexo = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
             this.tbApellidos = new System.Windows.Forms.TextBox();
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -51,11 +51,11 @@
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.tbEmail);
             this.groupBox1.Controls.Add(this.tbFecha);
             this.groupBox1.Controls.Add(this.tbDni);
             this.groupBox1.Controls.Add(this.tbDireccion);
             this.groupBox1.Controls.Add(this.tbTelefono);
-            this.groupBox1.Controls.Add(this.tbSexo);
             this.groupBox1.Controls.Add(this.tbApellidos);
             this.groupBox1.Controls.Add(this.tbNombre);
             this.groupBox1.Controls.Add(this.label7);
@@ -93,10 +93,10 @@
             // 
             // tbDni
             // 
-            this.tbDni.Location = new System.Drawing.Point(142, 184);
+            this.tbDni.Location = new System.Drawing.Point(142, 103);
             this.tbDni.Name = "tbDni";
             this.tbDni.Size = new System.Drawing.Size(246, 21);
-            this.tbDni.TabIndex = 12;
+            this.tbDni.TabIndex = 9;
             // 
             // tbDireccion
             // 
@@ -112,12 +112,12 @@
             this.tbTelefono.Size = new System.Drawing.Size(246, 21);
             this.tbTelefono.TabIndex = 10;
             // 
-            // tbSexo
+            // tbEmail
             // 
-            this.tbSexo.Location = new System.Drawing.Point(142, 103);
-            this.tbSexo.Name = "tbSexo";
-            this.tbSexo.Size = new System.Drawing.Size(246, 21);
-            this.tbSexo.TabIndex = 9;
+            this.tbEmail.Location = new System.Drawing.Point(142, 184);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(246, 21);
+            this.tbEmail.TabIndex = 12;
             // 
             // tbApellidos
             // 
@@ -145,7 +145,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 189);
+            this.label6.Location = new System.Drawing.Point(19, 108);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 16);
             this.label6.TabIndex = 5;
@@ -172,11 +172,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 108);
+            this.label3.Location = new System.Drawing.Point(19, 189);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 16);
+            this.label3.Size = new System.Drawing.Size(47, 16);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Sexo";
+            this.label3.Text = "Email";
             // 
             // label2
             // 
@@ -222,7 +222,7 @@
         private System.Windows.Forms.TextBox tbDni;
         private System.Windows.Forms.TextBox tbDireccion;
         private System.Windows.Forms.TextBox tbTelefono;
-        private System.Windows.Forms.TextBox tbSexo;
+        private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.TextBox tbApellidos;
         private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.Label label7;

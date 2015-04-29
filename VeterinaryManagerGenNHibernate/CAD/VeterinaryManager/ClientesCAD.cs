@@ -90,7 +90,7 @@ public void Modify (ClientesEN clientes)
                 clientesEN.Apellido = clientes.Apellido;
 
 
-                clientesEN.Sexo = clientes.Sexo;
+                clientesEN.Email = clientes.Email;
 
 
                 clientesEN.Telefono = clientes.Telefono;

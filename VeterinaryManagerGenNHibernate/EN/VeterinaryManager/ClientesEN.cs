@@ -21,7 +21,7 @@ private string apellido;
  *
  */
 
-private string sexo;
+private string email;
 
 /**
  *
@@ -67,8 +67,8 @@ public virtual string Apellido {
 }
 
 
-public virtual string Sexo {
-        get { return sexo; } set { sexo = value;  }
+public virtual string Email {
+        get { return email; } set { email = value;  }
 }
 
 
@@ -107,18 +107,18 @@ public ClientesEN()
 
 
 
-public ClientesEN(string dni, string nombre, string apellido, string sexo, string telefono, string direccion, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN> citas, Nullable<DateTime> fecha)
+public ClientesEN(string dni, string nombre, string apellido, string email, string telefono, string direccion, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN> citas, Nullable<DateTime> fecha)
 {
-        this.init (dni, nombre, apellido, sexo, telefono, direccion, citas, fecha);
+        this.init (dni, nombre, apellido, email, telefono, direccion, citas, fecha);
 }
 
 
 public ClientesEN(ClientesEN clientes)
 {
-        this.init (clientes.Dni, clientes.Nombre, clientes.Apellido, clientes.Sexo, clientes.Telefono, clientes.Direccion, clientes.Citas, clientes.Fecha);
+        this.init (clientes.Dni, clientes.Nombre, clientes.Apellido, clientes.Email, clientes.Telefono, clientes.Direccion, clientes.Citas, clientes.Fecha);
 }
 
-private void init (string dni, string nombre, string apellido, string sexo, string telefono, string direccion, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN> citas, Nullable<DateTime> fecha)
+private void init (string dni, string nombre, string apellido, string email, string telefono, string direccion, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN> citas, Nullable<DateTime> fecha)
 {
         this.Dni = dni;
 
@@ -127,7 +127,7 @@ private void init (string dni, string nombre, string apellido, string sexo, stri
 
         this.Apellido = apellido;
 
-        this.Sexo = sexo;
+        this.Email = email;
 
         this.Telefono = telefono;
 

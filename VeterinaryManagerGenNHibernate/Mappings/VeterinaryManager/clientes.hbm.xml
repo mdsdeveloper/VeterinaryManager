@@ -10,8 +10,8 @@
 					<property name="Apellido" type="string"> 
 						<column name="[apellido]"  not-null="true"/>
 					</property>
-					<property name="Sexo" type="string"> 
-						<column name="[sexo]"  not-null="true"/>
+					<property name="Email" type="string"> 
+						<column name="[email]"  not-null="true"/>
 					</property>
 					<property name="Telefono" type="string"> 
 						<column name="[telefono]"  not-null="true"/>

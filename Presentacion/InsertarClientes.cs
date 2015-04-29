@@ -30,10 +30,10 @@ namespace Presentacion
             if (clienteCAD.ReadOID(tbDni.Text) == null) 
             {
                 
-                if (tbNombre.Text != "" && tbApellidos.Text != "" && tbSexo.Text != "" && tbTelefono.Text != "" && tbDireccion.Text != "" && tbDni.Text != "" && tbFecha.Text != "")
+                if (tbNombre.Text != "" && tbApellidos.Text != "" && tbEmail.Text != "" && tbTelefono.Text != "" && tbDireccion.Text != "" && tbDni.Text != "" && tbFecha.Text != "")
                 {
                     ClientesCEN cliente = new ClientesCEN();
-                    cliente.Nuevo_cliente(tbNombre.Text, tbApellidos.Text, tbSexo.Text, tbTelefono.Text, tbDireccion.Text, tbDni.Text, DateTime.Today);
+                    cliente.Nuevo_cliente(tbNombre.Text, tbApellidos.Text, tbEmail.Text, tbTelefono.Text, tbDireccion.Text, tbDni.Text, DateTime.Today);
                     MessageBox.Show("Cliente insertado correctamente");
                     this.Dispose(false);
                 }
@@ -45,13 +45,14 @@ namespace Presentacion
             else 
             {
                 MessageBox.Show("El cliente ya existe");
+                Limpiar();
             }
         }
         public void Limpiar()
         {
             tbNombre.Text = "";
             tbApellidos.Text = "";
-            tbSexo.Text = "";
+            tbEmail.Text = "";
             tbTelefono.Text = "";
             tbDireccion.Text = "";
             tbDni.Text = "";

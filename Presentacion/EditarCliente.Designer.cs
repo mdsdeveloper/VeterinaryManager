@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tbFecha = new System.Windows.Forms.TextBox();
-            this.tbDni = new System.Windows.Forms.TextBox();
             this.tbDireccion = new System.Windows.Forms.TextBox();
             this.tbTelefono = new System.Windows.Forms.TextBox();
-            this.tbSexo = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
             this.tbApellidos = new System.Windows.Forms.TextBox();
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tbDni = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +57,7 @@
             this.groupBox1.Controls.Add(this.tbFecha);
             this.groupBox1.Controls.Add(this.tbDireccion);
             this.groupBox1.Controls.Add(this.tbTelefono);
-            this.groupBox1.Controls.Add(this.tbSexo);
+            this.groupBox1.Controls.Add(this.tbEmail);
             this.groupBox1.Controls.Add(this.tbApellidos);
             this.groupBox1.Controls.Add(this.tbNombre);
             this.groupBox1.Controls.Add(this.label7);
@@ -76,15 +76,15 @@
             this.groupBox1.Text = "Datos cliente";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // button1
+            // button2
             // 
-            this.button1.Location = new System.Drawing.Point(421, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 30);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Editar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button2.Location = new System.Drawing.Point(207, 261);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(87, 30);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Modificar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // tbFecha
             // 
@@ -92,13 +92,6 @@
             this.tbFecha.Name = "tbFecha";
             this.tbFecha.Size = new System.Drawing.Size(246, 21);
             this.tbFecha.TabIndex = 13;
-            // 
-            // tbDni
-            // 
-            this.tbDni.Location = new System.Drawing.Point(151, 20);
-            this.tbDni.Name = "tbDni";
-            this.tbDni.Size = new System.Drawing.Size(246, 21);
-            this.tbDni.TabIndex = 12;
             // 
             // tbDireccion
             // 
@@ -114,12 +107,12 @@
             this.tbTelefono.Size = new System.Drawing.Size(246, 21);
             this.tbTelefono.TabIndex = 10;
             // 
-            // tbSexo
+            // tbEmail
             // 
-            this.tbSexo.Location = new System.Drawing.Point(142, 128);
-            this.tbSexo.Name = "tbSexo";
-            this.tbSexo.Size = new System.Drawing.Size(246, 21);
-            this.tbSexo.TabIndex = 9;
+            this.tbEmail.Location = new System.Drawing.Point(142, 128);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(246, 21);
+            this.tbEmail.TabIndex = 9;
             // 
             // tbApellidos
             // 
@@ -144,15 +137,6 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Fecha";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(28, 25);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 16);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Dni";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -176,9 +160,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(19, 133);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 16);
+            this.label3.Size = new System.Drawing.Size(47, 16);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Sexo";
+            this.label3.Text = "Email";
             // 
             // label2
             // 
@@ -198,6 +182,32 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(421, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 30);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Editar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // tbDni
+            // 
+            this.tbDni.Location = new System.Drawing.Point(151, 20);
+            this.tbDni.Name = "tbDni";
+            this.tbDni.Size = new System.Drawing.Size(246, 21);
+            this.tbDni.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(28, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(31, 16);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Dni";
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -211,16 +221,6 @@
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Edita";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(207, 261);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 30);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // EditarCliente
             // 
@@ -252,7 +252,7 @@
         private System.Windows.Forms.TextBox tbDni;
         private System.Windows.Forms.TextBox tbDireccion;
         private System.Windows.Forms.TextBox tbTelefono;
-        private System.Windows.Forms.TextBox tbSexo;
+        private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.TextBox tbApellidos;
         private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.Label label7;

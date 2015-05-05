@@ -14,11 +14,12 @@ namespace Presentacion
 {
     public partial class InsertarClientes : Form
     {
+        public DateTime date = DateTime.Now;
         public InsertarClientes()
         {
             InitializeComponent();
             Limpiar();
-            tbFecha.Text = DateTime.Today.Day.ToString()+"/"+DateTime.Today.Month.ToString()+"/"+DateTime.Today.Year.ToString();
+            tbFecha.Text = date.ToString();
             tbFecha.Enabled = false;
         }
 
@@ -33,7 +34,7 @@ namespace Presentacion
                 if (tbNombre.Text != "" && tbApellidos.Text != "" && tbEmail.Text != "" && tbTelefono.Text != "" && tbDireccion.Text != "" && tbDni.Text != "" && tbFecha.Text != "")
                 {
                     ClientesCEN cliente = new ClientesCEN();
-                    cliente.Nuevo_cliente(tbNombre.Text, tbApellidos.Text, tbEmail.Text, tbTelefono.Text, tbDireccion.Text, tbDni.Text, DateTime.Today);
+                    cliente.Nuevo_cliente(tbNombre.Text, tbApellidos.Text, tbEmail.Text, tbTelefono.Text, tbDireccion.Text, tbDni.Text, date.ToString());
                     MessageBox.Show("Cliente insertado correctamente");
                     this.Dispose(false);
                 }

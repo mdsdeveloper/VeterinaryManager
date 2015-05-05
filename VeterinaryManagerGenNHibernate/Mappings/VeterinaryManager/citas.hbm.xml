@@ -4,7 +4,7 @@
 		                   namespace="VeterinaryManagerGenNHibernate.EN.VeterinaryManager">
 			<class name="CitasEN" table="[Citas]">
 						<id name="Id" column="[idCitas]"/>
-					<property name="Fecha" type="date"> 
+					<property name="Fecha" type="string"> 
 						<column name="[fecha]"  not-null="true"/>
 					</property>
 					<property name="Hora" type="string"> 

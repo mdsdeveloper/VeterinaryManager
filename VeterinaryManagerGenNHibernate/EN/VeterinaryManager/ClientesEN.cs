@@ -51,7 +51,7 @@ private System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.Veter
  *
  */
 
-private Nullable<DateTime> fecha;
+private string fecha;
 
 
 
@@ -92,7 +92,7 @@ public virtual System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.E
 }
 
 
-public virtual Nullable<DateTime> Fecha {
+public virtual string Fecha {
         get { return fecha; } set { fecha = value;  }
 }
 
@@ -107,7 +107,7 @@ public ClientesEN()
 
 
 
-public ClientesEN(string dni, string nombre, string apellido, string email, string telefono, string direccion, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN> citas, Nullable<DateTime> fecha)
+public ClientesEN(string dni, string nombre, string apellido, string email, string telefono, string direccion, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN> citas, string fecha)
 {
         this.init (dni, nombre, apellido, email, telefono, direccion, citas, fecha);
 }
@@ -118,7 +118,7 @@ public ClientesEN(ClientesEN clientes)
         this.init (clientes.Dni, clientes.Nombre, clientes.Apellido, clientes.Email, clientes.Telefono, clientes.Direccion, clientes.Citas, clientes.Fecha);
 }
 
-private void init (string dni, string nombre, string apellido, string email, string telefono, string direccion, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN> citas, Nullable<DateTime> fecha)
+private void init (string dni, string nombre, string apellido, string email, string telefono, string direccion, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN> citas, string fecha)
 {
         this.Dni = dni;
 

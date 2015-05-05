@@ -9,7 +9,7 @@ public partial class CitasEN
  *
  */
 
-private Nullable<DateTime> fecha;
+private string fecha;
 
 /**
  *
@@ -33,7 +33,7 @@ private VeterinaryManagerGenNHibernate.EN.VeterinaryManager.ClientesEN clientes;
 
 
 
-public virtual Nullable<DateTime> Fecha {
+public virtual string Fecha {
         get { return fecha; } set { fecha = value;  }
 }
 
@@ -62,7 +62,7 @@ public CitasEN()
 
 
 
-public CitasEN(int id, Nullable<DateTime> fecha, string hora, VeterinaryManagerGenNHibernate.EN.VeterinaryManager.ClientesEN clientes)
+public CitasEN(int id, string fecha, string hora, VeterinaryManagerGenNHibernate.EN.VeterinaryManager.ClientesEN clientes)
 {
         this.init (id, fecha, hora, clientes);
 }
@@ -73,7 +73,7 @@ public CitasEN(CitasEN citas)
         this.init (citas.Id, citas.Fecha, citas.Hora, citas.Clientes);
 }
 
-private void init (int id, Nullable<DateTime> fecha, string hora, VeterinaryManagerGenNHibernate.EN.VeterinaryManager.ClientesEN clientes)
+private void init (int id, string fecha, string hora, VeterinaryManagerGenNHibernate.EN.VeterinaryManager.ClientesEN clientes)
 {
         this.Id = id;
 

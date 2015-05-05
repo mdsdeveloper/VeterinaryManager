@@ -13,7 +13,7 @@ namespace Presentacion
 {
     public partial class EditarCliente : Form
     {
-        DateTime dia;
+        String dia;
         public EditarCliente()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace Presentacion
             {
                 if (clienteCAD.ReadOID(tbDni.Text) != null)
                 {
-                    dia = (DateTime)clienteCAD.ReadOID(tbDni.Text).Fecha;
+                    dia = clienteCAD.ReadOID(tbDni.Text).Fecha;
                     tbApellidos.Text = clienteCAD.ReadOID(tbDni.Text).Apellido;
                     tbNombre.Text = clienteCAD.ReadOID(tbDni.Text).Nombre;
                     tbDireccion.Text = clienteCAD.ReadOID(tbDni.Text).Direccion;

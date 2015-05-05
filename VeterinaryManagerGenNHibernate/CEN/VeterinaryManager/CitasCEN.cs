@@ -32,7 +32,7 @@ public ICitasCAD get_ICitasCAD ()
         return this._ICitasCAD;
 }
 
-public int Nueva_cita (Nullable<DateTime> p_fecha, string p_hora, int p_id)
+public int Nueva_cita (string p_fecha, string p_hora, int p_id)
 {
         CitasEN citasEN = null;
         int oid;
@@ -51,7 +51,7 @@ public int Nueva_cita (Nullable<DateTime> p_fecha, string p_hora, int p_id)
         return oid;
 }
 
-public void Modify (int p_Citas_OID, Nullable<DateTime> p_fecha, string p_hora)
+public void Modify (int p_Citas_OID, string p_fecha, string p_hora)
 {
         CitasEN citasEN = null;
 

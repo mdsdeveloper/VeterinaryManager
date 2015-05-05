@@ -19,7 +19,7 @@
 					<property name="Direccion" type="string"> 
 						<column name="[direccion]"  not-null="true"/>
 					</property>
-					<property name="Fecha" type="date"> 
+					<property name="Fecha" type="string"> 
 						<column name="[fecha]"  not-null="true"/>
 					</property>
 			

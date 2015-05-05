@@ -97,8 +97,9 @@
             // cerrarToolStripMenuItem
             // 
             this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
-            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cerrarToolStripMenuItem.Text = "Cerrar";
+            this.cerrarToolStripMenuItem.Click += new System.EventHandler(this.cerrarToolStripMenuItem_Click);
             // 
             // guardarToolStripMenuItem
             // 
@@ -239,6 +240,7 @@
             this.clienteToolStripMenuItem2.Name = "clienteToolStripMenuItem2";
             this.clienteToolStripMenuItem2.Size = new System.Drawing.Size(143, 22);
             this.clienteToolStripMenuItem2.Text = "Cliente";
+            this.clienteToolStripMenuItem2.Click += new System.EventHandler(this.clienteToolStripMenuItem2_Click);
             // 
             // animalToolStripMenuItem2
             // 
@@ -337,6 +339,7 @@
             this.toolStripLabel6.Name = "toolStripLabel6";
             this.toolStripLabel6.Size = new System.Drawing.Size(38, 22);
             this.toolStripLabel6.Text = "Cerrar";
+            this.toolStripLabel6.Click += new System.EventHandler(this.toolStripLabel6_Click);
             // 
             // toolStripLabel8
             // 

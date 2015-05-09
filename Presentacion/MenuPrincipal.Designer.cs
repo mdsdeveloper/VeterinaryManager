@@ -40,7 +40,6 @@
             this.clienteToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripLabel5 = new System.Windows.Forms.ToolStripSplitButton();
             this.clienteToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel8 = new System.Windows.Forms.ToolStripSplitButton();
             this.proToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tratamientoToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,6 +47,7 @@
             this.citaToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.productoToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.cobroToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,15 +78,16 @@
             // 
             // cerrarToolStripMenuItem
             // 
+            this.cerrarToolStripMenuItem.BackColor = System.Drawing.Color.Red;
             this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
-            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cerrarToolStripMenuItem.Text = "Cerrar";
             this.cerrarToolStripMenuItem.Click += new System.EventHandler(this.cerrarToolStripMenuItem_Click);
             // 
             // guardarToolStripMenuItem
             // 
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.guardarToolStripMenuItem.Text = "Guardar";
             // 
             // toolStripLabel2
@@ -100,7 +101,7 @@
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
@@ -115,7 +116,7 @@
             // clienteToolStripMenuItem1
             // 
             this.clienteToolStripMenuItem1.Name = "clienteToolStripMenuItem1";
-            this.clienteToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.clienteToolStripMenuItem1.Size = new System.Drawing.Size(118, 22);
             this.clienteToolStripMenuItem1.Text = "Cliente";
             this.clienteToolStripMenuItem1.Click += new System.EventHandler(this.clienteToolStripMenuItem1_Click);
             // 
@@ -130,7 +131,7 @@
             // clienteToolStripMenuItem2
             // 
             this.clienteToolStripMenuItem2.Name = "clienteToolStripMenuItem2";
-            this.clienteToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.clienteToolStripMenuItem2.Size = new System.Drawing.Size(118, 22);
             this.clienteToolStripMenuItem2.Text = "Cliente";
             this.clienteToolStripMenuItem2.Click += new System.EventHandler(this.clienteToolStripMenuItem2_Click);
             // 
@@ -145,15 +146,8 @@
             // clienteToolStripMenuItem3
             // 
             this.clienteToolStripMenuItem3.Name = "clienteToolStripMenuItem3";
-            this.clienteToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.clienteToolStripMenuItem3.Size = new System.Drawing.Size(118, 22);
             this.clienteToolStripMenuItem3.Text = "Cliente";
-            // 
-            // toolStripLabel6
-            // 
-            this.toolStripLabel6.Name = "toolStripLabel6";
-            this.toolStripLabel6.Size = new System.Drawing.Size(38, 22);
-            this.toolStripLabel6.Text = "Cerrar";
-            this.toolStripLabel6.Click += new System.EventHandler(this.toolStripLabel6_Click);
             // 
             // toolStripLabel8
             // 
@@ -171,38 +165,45 @@
             // proToolStripMenuItem
             // 
             this.proToolStripMenuItem.Name = "proToolStripMenuItem";
-            this.proToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.proToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.proToolStripMenuItem.Text = "Animal";
             // 
             // tratamientoToolStripMenuItem4
             // 
             this.tratamientoToolStripMenuItem4.Name = "tratamientoToolStripMenuItem4";
-            this.tratamientoToolStripMenuItem4.Size = new System.Drawing.Size(152, 22);
+            this.tratamientoToolStripMenuItem4.Size = new System.Drawing.Size(143, 22);
             this.tratamientoToolStripMenuItem4.Text = "Tratamiento";
             // 
             // servicioToolStripMenuItem4
             // 
             this.servicioToolStripMenuItem4.Name = "servicioToolStripMenuItem4";
-            this.servicioToolStripMenuItem4.Size = new System.Drawing.Size(152, 22);
+            this.servicioToolStripMenuItem4.Size = new System.Drawing.Size(143, 22);
             this.servicioToolStripMenuItem4.Text = "Servicio";
             // 
             // citaToolStripMenuItem3
             // 
             this.citaToolStripMenuItem3.Name = "citaToolStripMenuItem3";
-            this.citaToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.citaToolStripMenuItem3.Size = new System.Drawing.Size(143, 22);
             this.citaToolStripMenuItem3.Text = "Cita";
             // 
             // productoToolStripMenuItem4
             // 
             this.productoToolStripMenuItem4.Name = "productoToolStripMenuItem4";
-            this.productoToolStripMenuItem4.Size = new System.Drawing.Size(152, 22);
+            this.productoToolStripMenuItem4.Size = new System.Drawing.Size(143, 22);
             this.productoToolStripMenuItem4.Text = "Producto";
             // 
             // cobroToolStripMenuItem2
             // 
             this.cobroToolStripMenuItem2.Name = "cobroToolStripMenuItem2";
-            this.cobroToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.cobroToolStripMenuItem2.Size = new System.Drawing.Size(143, 22);
             this.cobroToolStripMenuItem2.Text = "Cobro";
+            // 
+            // toolStripLabel6
+            // 
+            this.toolStripLabel6.Name = "toolStripLabel6";
+            this.toolStripLabel6.Size = new System.Drawing.Size(38, 22);
+            this.toolStripLabel6.Text = "Cerrar";
+            this.toolStripLabel6.Click += new System.EventHandler(this.toolStripLabel6_Click);
             // 
             // MenuPrincipal
             // 

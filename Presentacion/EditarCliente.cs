@@ -125,67 +125,76 @@ namespace Presentacion
         private void button1_Click_1(object sender, EventArgs e)
         {
             ClientesCEN cliente = null;
+          //  btEditar.Enabled = false;
             ClientesEN clienteEN = null;
-            if (tbDni1.Text != null)
-         /*   {
+            if (tbDni1.Text != "")
+            {
                 cliente = new ClientesCEN();
                 clienteEN = new ClientesEN();
-                clienteEN = cliente.ReadOID(tbDni1.Text);
-                tbNombre.Text = clienteEN.Nombre;
-                tbApellidos.Text = clienteEN.Apellido;
-                tbDni.Text = clienteEN.Dni;
-                tbEmail.Text = clienteEN.Email;
-                tbTelefono.Text = clienteEN.Telefono;
-                tbDireccion.Text = clienteEN.Direccion;
-                tbFecha.Text = clienteEN.Fecha;
+                if (cliente.ReadOID(tbDni1.Text) != null)
+                {
+                    clienteEN = cliente.ReadOID(tbDni1.Text);
+                    tbNombre.Text = clienteEN.Nombre;
+                    tbApellidos.Text = clienteEN.Apellido;
+                    tbDni.Text = clienteEN.Dni;
+                    tbEmail.Text = clienteEN.Email;
+                    tbTelefono.Text = clienteEN.Telefono;
+                    tbDireccion.Text = clienteEN.Direccion;
+                    tbFecha.Text = clienteEN.Fecha;
+                }
+                else
+                {
+                    MessageBox.Show("El cliente no existe");
+                    tbDni1.Text = "";
+                }
 
-            }*/
-            if (tbNombre1.Text != null)
+            }
+            if (tbNombre1.Text != "")
             {
                 cliente = new ClientesCEN();
                 IList<ClientesEN> listaClientes = new List<ClientesEN>();
                 String[] listaDatos = listaDatos = new String[7];
-
+                // Aquí obtengo todos los clientes con el nombre que le paso por parametro.
                 listaClientes = cliente.Dame_por_nombre(tbNombre1.Text);
-                dataGridView1.ClearSelection();
-               
-                for (int i = 0; i < listaClientes.Count; i++)
+                // Aquí controlo que el nombre este en la base de datos.
+                if (listaClientes.Count != 0)
                 {
                     
-                    clienteEN = new ClientesEN();
+                    DataTable table = new DataTable();
 
-                    listaDatos[0] = listaClientes[i].Dni;
-                    listaDatos[1] = listaClientes[i].Nombre;
-                    listaDatos[2] = listaClientes[i].Apellido;
-                    listaDatos[3] = listaClientes[i].Email;
-                    listaDatos[4] = listaClientes[i].Telefono;
-                    listaDatos[5] = listaClientes[i].Direccion;
-                    listaDatos[6] = listaClientes[i].Fecha;
-                        
-                          //  listaDatos[j] = dataGridView1.Rows[i].Cells[j].Value.ToString();
-                   // for (int j = 0; j < listaDatos.Length; j++)
-                    int j = 0;
-                    while( j < listaDatos.Length) 
+                    //Aquí recorro la lista de datos y inserto los datos de cada cliente recuperado de la base de datos.
+                    for (int i = 0; i < listaClientes.Count; i++)
                     {
-                        this.dataGridView1.Rows[i].Cells[j].Value = listaDatos[j].ToString();
-                        j++;
-                    }
-                    
-                //    this.dataGridView1.Rows[i,0].Cells.Add(listaDatos[i].ToString());
+                        listaDatos[0] = listaClientes[i].Dni;
+                        listaDatos[1] = listaClientes[i].Nombre;
+                        listaDatos[2] = listaClientes[i].Apellido;
+                        listaDatos[3] = listaClientes[i].Email;
+                        listaDatos[4] = listaClientes[i].Telefono;
+                        listaDatos[5] = listaClientes[i].Direccion;
+                        listaDatos[6] = listaClientes[i].Fecha;
+                        //Aquí lo que hago es añadir una nueva linea en el dataGridView cada
+                        // vez que encuentro un cliente en la base de datos para poder añadirlo 
+                        // al dataGridView.
+                        DataRow newRow = table.NewRow();
+                        table.Rows.Add(newRow);
+                        dataGridView1.DataSource = table;
+                        int j = 0;
+                        while (j < listaDatos.Length)
+                        {
+                            this.dataGridView1.Rows[i].Cells[j].Value = listaDatos[j].ToString();
+                            j++;
+                        }
+                    } // Fin for
 
-            /*            clienteEN.Dni = listaDatos[0];
-                        clienteEN.Nombre = listaDatos[1];
-                        clienteEN.Apellido = listaDatos[2];
-                        clienteEN.Email = listaDatos[3];
-                        clienteEN.Telefono = listaDatos[4];
-                        clienteEN.Direccion = listaDatos[5];
-                        clienteEN.Fecha = listaDatos[6];
-
-                        listaClientes.Add(clienteEN);
-                    */
-                    
-                }
             }
+            else
+            {
+                MessageBox.Show("Ese nombre no existe");
+                tbNombre1.Text = "";
+            }
+               
+                }// Fin if nombre ""
+        
             
         }
     }

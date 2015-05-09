@@ -34,11 +34,13 @@
             this.bIngresar = new System.Windows.Forms.Button();
             this.tbContraseña = new System.Windows.Forms.TextBox();
             this.tbUsuario = new System.Windows.Forms.TextBox();
+            this.btCancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btCancelar);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.bIngresar);
@@ -73,7 +75,7 @@
             // 
             // bIngresar
             // 
-            this.bIngresar.Location = new System.Drawing.Point(206, 130);
+            this.bIngresar.Location = new System.Drawing.Point(63, 130);
             this.bIngresar.Name = "bIngresar";
             this.bIngresar.Size = new System.Drawing.Size(87, 30);
             this.bIngresar.TabIndex = 2;
@@ -83,7 +85,7 @@
             // 
             // tbContraseña
             // 
-            this.tbContraseña.Location = new System.Drawing.Point(6, 97);
+            this.tbContraseña.Location = new System.Drawing.Point(9, 100);
             this.tbContraseña.Name = "tbContraseña";
             this.tbContraseña.PasswordChar = '*';
             this.tbContraseña.Size = new System.Drawing.Size(199, 21);
@@ -95,6 +97,16 @@
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Size = new System.Drawing.Size(199, 21);
             this.tbUsuario.TabIndex = 0;
+            // 
+            // btCancelar
+            // 
+            this.btCancelar.Location = new System.Drawing.Point(156, 130);
+            this.btCancelar.Name = "btCancelar";
+            this.btCancelar.Size = new System.Drawing.Size(87, 30);
+            this.btCancelar.TabIndex = 3;
+            this.btCancelar.Text = "Cancelar";
+            this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // Login
             // 
@@ -121,6 +133,7 @@
         private System.Windows.Forms.Button bIngresar;
         private System.Windows.Forms.TextBox tbContraseña;
         private System.Windows.Forms.TextBox tbUsuario;
+        private System.Windows.Forms.Button btCancelar;
     }
 }
 

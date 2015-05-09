@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class EditarCliente
+    partial class BorrarCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -65,10 +65,15 @@
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.veterinaryManagerGenNHibernateDataSet = new Presentacion.VeterinaryManagerGenNHibernateDataSet();
             this.clientesTableAdapter = new Presentacion.VeterinaryManagerGenNHibernateDataSetTableAdapters.ClientesTableAdapter();
+            this.veterinaryManagerGenNHibernateDataSet1 = new Presentacion.VeterinaryManagerGenNHibernateDataSet1();
+            this.clientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.clientesTableAdapter1 = new Presentacion.VeterinaryManagerGenNHibernateDataSet1TableAdapters.ClientesTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.veterinaryManagerGenNHibernateDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.veterinaryManagerGenNHibernateDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -191,7 +196,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(87, 30);
             this.button2.TabIndex = 14;
-            this.button2.Text = "Actualizar";
+            this.button2.Text = "Borrar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -238,7 +243,6 @@
             this.tbApellidos.Name = "tbApellidos";
             this.tbApellidos.Size = new System.Drawing.Size(246, 21);
             this.tbApellidos.TabIndex = 8;
-            this.tbApellidos.TextChanged += new System.EventHandler(this.tbApellidos_TextChanged);
             // 
             // tbNombre
             // 
@@ -313,7 +317,7 @@
             this.telefonoDataGridViewTextBoxColumn,
             this.direccionDataGridViewTextBoxColumn,
             this.fechaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.clientesBindingSource;
+            this.dataGridView1.DataSource = this.clientesBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(11, 285);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(743, 222);
@@ -376,7 +380,21 @@
             // 
             this.clientesTableAdapter.ClearBeforeFill = true;
             // 
-            // EditarCliente
+            // veterinaryManagerGenNHibernateDataSet1
+            // 
+            this.veterinaryManagerGenNHibernateDataSet1.DataSetName = "VeterinaryManagerGenNHibernateDataSet1";
+            this.veterinaryManagerGenNHibernateDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // clientesBindingSource1
+            // 
+            this.clientesBindingSource1.DataMember = "Clientes";
+            this.clientesBindingSource1.DataSource = this.veterinaryManagerGenNHibernateDataSet1;
+            // 
+            // clientesTableAdapter1
+            // 
+            this.clientesTableAdapter1.ClearBeforeFill = true;
+            // 
+            // BorrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -387,15 +405,17 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "EditarCliente";
+            this.Name = "BorrarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Editar Cliente";
-            this.Load += new System.EventHandler(this.EditarCliente_Load);
+            this.Text = "Borrar Cliente";
+            this.Load += new System.EventHandler(this.BorrarCliente_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.veterinaryManagerGenNHibernateDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.veterinaryManagerGenNHibernateDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -438,6 +458,9 @@
         private System.Windows.Forms.TextBox tbNombre1;
         private System.Windows.Forms.TextBox tbDni1;
         private System.Windows.Forms.Button button1;
+        private VeterinaryManagerGenNHibernateDataSet1 veterinaryManagerGenNHibernateDataSet1;
+        private System.Windows.Forms.BindingSource clientesBindingSource1;
+        private VeterinaryManagerGenNHibernateDataSet1TableAdapters.ClientesTableAdapter clientesTableAdapter1;
 
     }
 }

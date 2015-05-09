@@ -48,9 +48,17 @@ namespace Presentacion
 
         private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            // cierro la ventana y la aplicación.
             this.Close();
             Application.Exit();
         }
+
+        private void clienteToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            BorrarCliente borrar = new BorrarCliente();
+            borrar.Visible = true;
+        }
+
+         
     }
 }

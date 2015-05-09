@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripSplitButton();
             this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,7 +79,7 @@
             // 
             // cerrarToolStripMenuItem
             // 
-            this.cerrarToolStripMenuItem.BackColor = System.Drawing.Color.Red;
+            this.cerrarToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
             this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cerrarToolStripMenuItem.Text = "Cerrar";
@@ -148,6 +149,7 @@
             this.clienteToolStripMenuItem3.Name = "clienteToolStripMenuItem3";
             this.clienteToolStripMenuItem3.Size = new System.Drawing.Size(118, 22);
             this.clienteToolStripMenuItem3.Text = "Cliente";
+            this.clienteToolStripMenuItem3.Click += new System.EventHandler(this.clienteToolStripMenuItem3_Click);
             // 
             // toolStripLabel8
             // 
@@ -209,6 +211,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(873, 427);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;

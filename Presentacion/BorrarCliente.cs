@@ -12,21 +12,32 @@ using VeterinaryManagerGenNHibernate.EN.VeterinaryManager;
 
 namespace Presentacion
 {
-    public partial class EditarCliente : Form
+    public partial class BorrarCliente : Form
     {
         String dia;
-        public EditarCliente()
+        public BorrarCliente()
         {
             InitializeComponent();
-            
+        }
+
+        private void BorrarCliente_Load(object sender, EventArgs e)
+        {
+
+            // TODO: This line of code loads data into the 'veterinaryManagerGenNHibernateDataSet.Clientes' table. You can move, or remove it, as needed.
+    //        this.clientesTableAdapter.Fill(this.veterinaryManagerGenNHibernateDataSet.Clientes);
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-          
             ClientesCAD clienteCAD = new ClientesCAD();
 
             int i;
+
             i = dataGridView1.CurrentCell.RowIndex;
 
             if (clienteCAD.ReadOID(dataGridView1.Rows[i].Cells[0].Value.ToString()) != null)
@@ -46,71 +57,42 @@ namespace Presentacion
             {
                 MessageBox.Show("El cliente no existe");
             }
-                
-            
-            
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void btEditar_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ClientesCAD clienteCAD = null;
-            ClientesEN cliente = null;
-            bool modificado = false;
-            int k;
-            k = dataGridView1.CurrentCell.RowIndex;
-
-          //  dia = clienteCAD.ReadOID(dataGridView1.Rows[i].Cells[0].Value.ToString()).Fecha;
-                
-
+            ClientesCEN clienteCEN = null;
+            bool borrado = false;
             
             if (tbNombre.Text != "" && tbApellidos.Text != "" && tbEmail.Text != "" && tbTelefono.Text != "" && tbDireccion.Text != "" && tbFecha.Text != "")
             {
-                if (tbNombre.Text == dataGridView1.Rows[k].Cells[1].Value.ToString()
-                    && tbApellidos.Text == dataGridView1.Rows[k].Cells[2].Value.ToString()
-                    && tbDireccion.Text == dataGridView1.Rows[k].Cells[5].Value.ToString()
-                    && tbEmail.Text == dataGridView1.Rows[k].Cells[3].Value.ToString()
-                    && tbFecha.Text == dia.ToString()
-                    && tbTelefono.Text == dataGridView1.Rows[k].Cells[4].Value.ToString())
-                {
-                    MessageBox.Show("No se ha modificado nada");
-                }
-                else
-                {
-                    clienteCAD = new ClientesCAD();
-                    cliente = new ClientesEN();
-                    cliente.Dni = tbDni.Text;
-                    cliente.Nombre = tbNombre.Text;
-                    cliente.Apellido = tbApellidos.Text;
-                    cliente.Email = tbEmail.Text;
-                    cliente.Telefono = tbTelefono.Text;
-                    cliente.Direccion = tbDireccion.Text;
-                    cliente.Fecha = tbFecha.Text;
-                    clienteCAD.Modify(cliente);
-                    MessageBox.Show("Modificación correcta");
-                    tbDni1.Text = "";
-                    tbNombre1.Text = "";
-                    modificado = true;
-                    Limpiar();
-                    this.clientesTableAdapter.Fill(this.veterinaryManagerGenNHibernateDataSet.Clientes);
-                    tbDni.Enabled = true;
-                }
-                
+                clienteCEN = new ClientesCEN();
+                clienteCEN.Destroy(tbDni.Text);
+          //      clienteCEN.Modify(tbDni.Text, tbNombre.Text, tbApellidos.Text, tbEmail.Text, tbTelefono.Text, tbDireccion.Text, dia);
+                MessageBox.Show("Borrado correcto");
+                borrado = true;
+                Limpiar();                
+                tbDni.Enabled = true;
+                // TODO: This line of code loads data into the 'veterinaryManagerGenNHibernateDataSet1.Clientes' table. You can move, or remove it, as needed.
+                this.clientesTableAdapter1.Fill(this.veterinaryManagerGenNHibernateDataSet1.Clientes);
+                tbNombre1.Text = "";
+                tbDni1.Text = "";
             }
             else
             {
                 MessageBox.Show("Falta rellenar algún dato");
             }
-            if (modificado)
+            if (borrado)
             {
                 IList<ClientesEN> listaActualizada = new List<ClientesEN>();
                 String[] listaDatos = new String[7];
                 DataTable table1 = new DataTable();
-                listaActualizada = clienteCAD.ReadAll(0, this.clientesBindingSource.Count);
+                listaActualizada = clienteCEN.ReadAll(0, this.clientesBindingSource1.Count);
                 for (int i = 0; i < listaActualizada.Count; i++)
                 {
                     listaDatos[0] = listaActualizada[i].Dni;
@@ -144,29 +126,26 @@ namespace Presentacion
             tbFecha.Text = "";
         }
 
-        private void tbApellidos_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void EditarCliente_Load(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // TODO: This line of code loads data into the 'veterinaryManagerGenNHibernateDataSet.Clientes' table. You can move, or remove it, as needed.
-            this.clientesTableAdapter.Fill(this.veterinaryManagerGenNHibernateDataSet.Clientes);  
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            ClientesCAD cliente = null;
+            ClientesCEN cliente = null;
+            //  btEditar.Enabled = false;
             ClientesEN clienteEN = null;
+
+
             if (tbDni1.Text != "")
             {
-                cliente = new ClientesCAD();
+                cliente = new ClientesCEN();
                 clienteEN = new ClientesEN();
                 if (cliente.ReadOID(tbDni1.Text) != null)
                 {
@@ -174,7 +153,6 @@ namespace Presentacion
                     tbNombre.Text = clienteEN.Nombre;
                     tbApellidos.Text = clienteEN.Apellido;
                     tbDni.Text = clienteEN.Dni;
-                    tbDni.Enabled = false;
                     tbEmail.Text = clienteEN.Email;
                     tbTelefono.Text = clienteEN.Telefono;
                     tbDireccion.Text = clienteEN.Direccion;
@@ -189,9 +167,10 @@ namespace Presentacion
             }
             if (tbNombre1.Text != "")
             {
-                cliente = new ClientesCAD();
+                cliente = new ClientesCEN();
                 IList<ClientesEN> listaClientes = new List<ClientesEN>();
-                String[] listaDatos = listaDatos = new String[7];
+                
+                String[] listaDatos = new String[7];
                 // Aquí obtengo todos los clientes con el nombre que le paso por parametro.
                 listaClientes = cliente.Dame_por_nombre(tbNombre1.Text);
                 // Aquí controlo que el nombre este en la base de datos.
@@ -223,28 +202,25 @@ namespace Presentacion
                             j++;
                         }
                     } // Fin for
+                    
 
+                   
+                    
                 }
                 else
                 {
                     MessageBox.Show("Ese nombre no existe");
                     tbNombre1.Text = "";
-                }
+                }               
 
-            }// Fin if nombre ""
-            if(tbNombre1.Text == "" && tbDni1.Text == "")
-            {
-                MessageBox.Show("Introduce un dato para filtrar");
-            }
-        
-            
+            }// Fin if nombre ""            
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void BorrarCliente_Load_1(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'veterinaryManagerGenNHibernateDataSet1.Clientes' table. You can move, or remove it, as needed.
+            this.clientesTableAdapter1.Fill(this.veterinaryManagerGenNHibernateDataSet1.Clientes);
 
         }
     }
 }
-
-

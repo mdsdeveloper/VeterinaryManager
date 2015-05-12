@@ -47,6 +47,7 @@ namespace Presentacion
             {
                 MessageBox.Show("El cliente ya existe");
                 Limpiar();
+                tbFecha.Text = date.ToString();
             }
         }
         public void Limpiar()

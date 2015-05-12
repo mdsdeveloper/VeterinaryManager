@@ -59,6 +59,12 @@ namespace Presentacion
             borrar.Visible = true;
         }
 
+        private void proToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Animales animal = new Animales();
+            animal.Visible = true;
+        }
+
          
     }
 }

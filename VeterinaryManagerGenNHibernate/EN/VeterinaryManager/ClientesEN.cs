@@ -53,6 +53,12 @@ private System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.Veter
 
 private string fecha;
 
+/**
+ *
+ */
+
+private System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.AnimalesEN> animales;
+
 
 
 
@@ -97,28 +103,34 @@ public virtual string Fecha {
 }
 
 
+public virtual System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.AnimalesEN> Animales {
+        get { return animales; } set { animales = value;  }
+}
+
+
 
 
 
 public ClientesEN()
 {
         citas = new System.Collections.Generic.List<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN>();
+        animales = new System.Collections.Generic.List<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.AnimalesEN>();
 }
 
 
 
-public ClientesEN(string dni, string nombre, string apellido, string email, string telefono, string direccion, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN> citas, string fecha)
+public ClientesEN(string dni, string nombre, string apellido, string email, string telefono, string direccion, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN> citas, string fecha, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.AnimalesEN> animales)
 {
-        this.init (dni, nombre, apellido, email, telefono, direccion, citas, fecha);
+        this.init (dni, nombre, apellido, email, telefono, direccion, citas, fecha, animales);
 }
 
 
 public ClientesEN(ClientesEN clientes)
 {
-        this.init (clientes.Dni, clientes.Nombre, clientes.Apellido, clientes.Email, clientes.Telefono, clientes.Direccion, clientes.Citas, clientes.Fecha);
+        this.init (clientes.Dni, clientes.Nombre, clientes.Apellido, clientes.Email, clientes.Telefono, clientes.Direccion, clientes.Citas, clientes.Fecha, clientes.Animales);
 }
 
-private void init (string dni, string nombre, string apellido, string email, string telefono, string direccion, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN> citas, string fecha)
+private void init (string dni, string nombre, string apellido, string email, string telefono, string direccion, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CitasEN> citas, string fecha, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.AnimalesEN> animales)
 {
         this.Dni = dni;
 
@@ -136,6 +148,8 @@ private void init (string dni, string nombre, string apellido, string email, str
         this.Citas = citas;
 
         this.Fecha = fecha;
+
+        this.Animales = animales;
 }
 
 public override bool Equals (object obj)

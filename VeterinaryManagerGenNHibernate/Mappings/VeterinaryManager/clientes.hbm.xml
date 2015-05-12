@@ -38,6 +38,16 @@
 					    </bag>
 					
 			
+			
+		  			
+						<bag name="Animales" >
+							<key>
+								<column name="[FK_dniClientes_idClientes]"/>
+					      	</key>
+							<one-to-many class="VeterinaryManagerGenNHibernate.EN.VeterinaryManager.AnimalesEN"/>
+					    </bag>
+					
+					
 					
 					
 					

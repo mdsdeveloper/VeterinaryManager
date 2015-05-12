@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="VeterinaryManagerGenNHibernate"
+		                   namespace="VeterinaryManagerGenNHibernate.EN.VeterinaryManager">
+			<class name="AnimalesEN" table="[Animales]">
+						<id name="Id" column="[idAnimales]"/>
+					<property name="Nombre" type="string"> 
+						<column name="[nombre]"  not-null="true"/>
+					</property>
+					<property name="Categoria" type="string"> 
+						<column name="[categoria]"  not-null="true"/>
+					</property>
+					<property name="Raza" type="string"> 
+						<column name="[raza]"  not-null="true"/>
+					</property>
+					<property name="Sexo" type="string"> 
+						<column name="[sexo]"  not-null="true"/>
+					</property>
+					<property name="Color" type="string"> 
+						<column name="[color]"  not-null="true"/>
+					</property>
+					<property name="Observaciones" type="string"> 
+						<column name="[observaciones]"  not-null="true"/>
+					</property>
+					<property name="Edad" type="integer"> 
+						<column name="[edad]"  not-null="true"/>
+					</property>
+			
+			
+			
+		  			
+						<many-to-one name="Clientes" class="VeterinaryManagerGenNHibernate.EN.VeterinaryManager.ClientesEN" >	
+								<column name="[FK_dniClientes_idClientes]"/>
+						</many-to-one>
+											 					
+			
+			
+			
+			
+			
+			
+					
+					
+					
+					
+					
+					
+					
+					
+					
+		
+		  </class>
+		  
+		  <query name="AnimalesENReadAllHQL">from AnimalesEN</query>
+		  <query name="AnimalesENdame_por_nombreHQL"><![CDATA[select an FROM AnimalesEN an where an.Nombre=:p_nombre]]></query>
+		  <query name="AnimalesENdame_por_razaHQL"><![CDATA[select an FROM AnimalesEN an where an.Raza=:p_raza]]></query>
+		  <query name="AnimalesENdame_todosHQL"><![CDATA[ FROM AnimalesEN]]></query>
+		</hibernate-mapping>
+	

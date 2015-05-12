@@ -191,7 +191,7 @@ namespace Presentacion
             {
                 cliente = new ClientesCAD();
                 IList<ClientesEN> listaClientes = new List<ClientesEN>();
-                String[] listaDatos = listaDatos = new String[7];
+                String[] listaDatos = new String[7];
                 // Aquí obtengo todos los clientes con el nombre que le paso por parametro.
                 listaClientes = cliente.Dame_por_nombre(tbNombre1.Text);
                 // Aquí controlo que el nombre este en la base de datos.

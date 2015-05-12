@@ -57,6 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Animales.Designer.cs">
+      <DependentUpon>Animales.cs</DependentUpon>
+    </Compile>
     <Compile Include="BorrarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VeterinaryManagerGenNHibernateDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="VeterinaryManagerGenNHibernateDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VeterinaryManagerGenNHibernateDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VeterinaryManagerGenNHibernateDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VeterinaryManagerGenNHibernateDataSet3.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Animales.resx">
+      <DependentUpon>Animales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BorrarCliente.resx">
       <DependentUpon>BorrarCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +183,28 @@
     </None>
     <None Include="VeterinaryManagerGenNHibernateDataSet1.xss">
       <DependentUpon>VeterinaryManagerGenNHibernateDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VeterinaryManagerGenNHibernateDataSet2.xsc">
+      <DependentUpon>VeterinaryManagerGenNHibernateDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="VeterinaryManagerGenNHibernateDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VeterinaryManagerGenNHibernateDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VeterinaryManagerGenNHibernateDataSet2.xss">
+      <DependentUpon>VeterinaryManagerGenNHibernateDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="VeterinaryManagerGenNHibernateDataSet3.xsc">
+      <DependentUpon>VeterinaryManagerGenNHibernateDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="VeterinaryManagerGenNHibernateDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VeterinaryManagerGenNHibernateDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VeterinaryManagerGenNHibernateDataSet3.xss">
+      <DependentUpon>VeterinaryManagerGenNHibernateDataSet3.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

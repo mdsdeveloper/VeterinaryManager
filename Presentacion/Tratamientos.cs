@@ -160,5 +160,27 @@ namespace Presentacion
             button6.Enabled = true;
             btInsertarAnimal.Text = "Insertar";
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (tbNombre.Text != "" && tbPrecio.Text != "" && tbFecha_Ini.Text != "" && tbFecha_fin.Text != "" && tbID.Text != "")
+            {
+                
+                TratamientosCAD trataCAD = new TratamientosCAD();
+                TratamientosCEN trataCEN = new TratamientosCEN();
+                int i;
+                i = dataGridView1.CurrentCell.RowIndex;
+                trataCEN.Modify(tbID.Text, tbNombre.Text, float.Parse(tbPrecio.Text), tbFecha_Ini.Text, tbFecha_fin.Text);
+                MessageBox.Show("Modificación correcta");
+                //   this.animalesTableAdapter1.Fill(this.veterinaryManagerGenNHibernateDataSet22.Animales);
+                Dame_Todos();
+                Limpiar();
+                tbID.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Tienes que introducir todos los campos");
+            }
+        }
     }
 }

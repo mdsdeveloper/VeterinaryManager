@@ -222,5 +222,35 @@ public System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.Veteri
 
         return result;
 }
+public void Add_animal (string p_Tratamientos_OID, string p_animales_OID)
+{
+        VeterinaryManagerGenNHibernate.EN.VeterinaryManager.TratamientosEN tratamientosEN = null;
+        try
+        {
+                SessionInitializeTransaction ();
+                tratamientosEN = (TratamientosEN)session.Load (typeof(TratamientosEN), p_Tratamientos_OID);
+                tratamientosEN.Animales = (VeterinaryManagerGenNHibernate.EN.VeterinaryManager.AnimalesEN)session.Load (typeof(VeterinaryManagerGenNHibernate.EN.VeterinaryManager.AnimalesEN), p_animales_OID);
+
+                tratamientosEN.Animales.Tratamientos.Add (tratamientosEN);
+
+
+
+                session.Update (tratamientosEN);
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is VeterinaryManagerGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new VeterinaryManagerGenNHibernate.Exceptions.DataLayerException ("Error in TratamientosCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+}
 }
 }

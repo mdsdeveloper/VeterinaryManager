@@ -14,6 +14,7 @@ namespace Presentacion
     public partial class Tratamientos : Form
     {
         String Animal_OID;
+        bool editarAnimal = false;
         public Tratamientos()
         {
             InitializeComponent();
@@ -24,12 +25,11 @@ namespace Presentacion
 
         private void Tratamientos_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'veterinaryManagerGenNHibernateDataSet4.Tratamientos' table. You can move, or remove it, as needed.
+            this.tratamientosTableAdapter.Fill(this.veterinaryManagerGenNHibernateDataSet4.Tratamientos);
             // TODO: This line of code loads data into the 'veterinaryManagerGenNHibernateDataSet2.Animales' table. You can move, or remove it, as needed.
             this.animalesTableAdapter.Fill(this.veterinaryManagerGenNHibernateDataSet2.Animales);
            
-            // TODO: This line of code loads data into the 'veterinaryManagerGenNHibernateDataSet4.Tratamientos' table. You can move, or remove it, as needed.
-            this.tratamientosTableAdapter.Fill(this.veterinaryManagerGenNHibernateDataSet4.Tratamientos);
-
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -77,7 +77,8 @@ namespace Presentacion
                     btBuscar.Enabled = false;
                     btInsertarAnimal.Enabled = true;
                     tbID.Enabled = false;
-                    Limpiar();
+                    editarAnimal = true; // con esto controlo que se llame a editar de animales o tratamiento.
+                  //  Limpiar();
                 }
                 else
                 {
@@ -94,24 +95,30 @@ namespace Presentacion
         {
             TratamientosCAD tratamientoCAD = null;
             int i;
-            i = dataGridView2.CurrentCell.RowIndex;
-            tbAnimal.Text = dataGridView2.Rows[i].Cells[1].Value.ToString();// aqui cojo el nombre del cliente
-            Animal_OID = dataGridView2.Rows[i].Cells[0].Value.ToString();// aqui cojo el id del cliente.
-
-            tratamientoCAD = new TratamientosCAD();
-            i = dataGridView1.CurrentCell.RowIndex;
-            tbID.Enabled = false;
-            if (tratamientoCAD.ReadOID(dataGridView1.Rows[i].Cells[0].Value.ToString()) != null)
+            if (editarAnimal == true)
             {
-                tbNombre.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-                tbID.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
-                tbPrecio.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
-                tbFecha_Ini.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
-                tbFecha_fin.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+                i = dataGridView2.CurrentCell.RowIndex;
+                tbAnimal.Text = dataGridView2.Rows[i].Cells[1].Value.ToString();// aqui cojo el nombre del cliente
+                Animal_OID = dataGridView2.Rows[i].Cells[0].Value.ToString();// aqui cojo el id del cliente.
+                editarAnimal = false;
             }
             else
             {
-                MessageBox.Show("El tratamiento no existe");
+                tratamientoCAD = new TratamientosCAD();
+                i = dataGridView1.CurrentCell.RowIndex;
+                tbID.Enabled = false;
+                if (tratamientoCAD.ReadOID(dataGridView1.Rows[i].Cells[0].Value.ToString()) != null)
+                {
+                    tbNombre.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                    tbID.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                    tbPrecio.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                    tbFecha_Ini.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                    tbFecha_fin.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("El tratamiento no existe");
+                }
             }
         }
         public void Dame_Todos()
@@ -143,7 +150,15 @@ namespace Presentacion
 
         private void btInsertarAnimal_Click(object sender, EventArgs e)
         {
-
+            TratamientosCEN trataCEN = new TratamientosCEN();
+            trataCEN.Add_animal(tbID.Text, Animal_OID); // Aquí le paso el oid del cliente que recogi antes en editar.
+            Dame_Todos();
+            button1.Enabled = true;
+            button2.Enabled = true;
+            button3.Enabled = true;
+            Limpiar();
+            button6.Enabled = true;
+            btInsertarAnimal.Text = "Insertar";
         }
     }
 }

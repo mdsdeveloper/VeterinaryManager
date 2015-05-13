@@ -289,6 +289,8 @@ namespace Presentacion {
             
             private global::System.Data.DataColumn columnfecha_fin;
             
+            private global::System.Data.DataColumn columnFK_idAnimales_idAnimales;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TratamientosDataTable() {
@@ -364,6 +366,14 @@ namespace Presentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FK_idAnimales_idAnimalesColumn {
+                get {
+                    return this.columnFK_idAnimales_idAnimales;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -399,14 +409,15 @@ namespace Presentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TratamientosRow AddTratamientosRow(string idTratamientos, string nombre, float precio, string fecha_inicio, string fecha_fin) {
+            public TratamientosRow AddTratamientosRow(string idTratamientos, string nombre, float precio, string fecha_inicio, string fecha_fin, string FK_idAnimales_idAnimales) {
                 TratamientosRow rowTratamientosRow = ((TratamientosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         idTratamientos,
                         nombre,
                         precio,
                         fecha_inicio,
-                        fecha_fin};
+                        fecha_fin,
+                        FK_idAnimales_idAnimales};
                 rowTratamientosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTratamientosRow);
                 return rowTratamientosRow;
@@ -441,6 +452,7 @@ namespace Presentacion {
                 this.columnprecio = base.Columns["precio"];
                 this.columnfecha_inicio = base.Columns["fecha_inicio"];
                 this.columnfecha_fin = base.Columns["fecha_fin"];
+                this.columnFK_idAnimales_idAnimales = base.Columns["FK_idAnimales_idAnimales"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -456,6 +468,8 @@ namespace Presentacion {
                 base.Columns.Add(this.columnfecha_inicio);
                 this.columnfecha_fin = new global::System.Data.DataColumn("fecha_fin", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfecha_fin);
+                this.columnFK_idAnimales_idAnimales = new global::System.Data.DataColumn("FK_idAnimales_idAnimales", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFK_idAnimales_idAnimales);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidTratamientos}, true));
                 this.columnidTratamientos.AllowDBNull = false;
@@ -468,6 +482,7 @@ namespace Presentacion {
                 this.columnfecha_inicio.MaxLength = 255;
                 this.columnfecha_fin.AllowDBNull = false;
                 this.columnfecha_fin.MaxLength = 255;
+                this.columnFK_idAnimales_idAnimales.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -662,6 +677,35 @@ namespace Presentacion {
                     this[this.tableTratamientos.fecha_finColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string FK_idAnimales_idAnimales {
+                get {
+                    try {
+                        return ((string)(this[this.tableTratamientos.FK_idAnimales_idAnimalesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FK_idAnimales_idAnimales\' in table \'Tratamientos\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableTratamientos.FK_idAnimales_idAnimalesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFK_idAnimales_idAnimalesNull() {
+                return this.IsNull(this.tableTratamientos.FK_idAnimales_idAnimalesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFK_idAnimales_idAnimalesNull() {
+                this[this.tableTratamientos.FK_idAnimales_idAnimalesColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -828,43 +872,48 @@ namespace Presentacion.VeterinaryManagerGenNHibernateDataSet4TableAdapters {
             tableMapping.ColumnMappings.Add("precio", "precio");
             tableMapping.ColumnMappings.Add("fecha_inicio", "fecha_inicio");
             tableMapping.ColumnMappings.Add("fecha_fin", "fecha_fin");
+            tableMapping.ColumnMappings.Add("FK_idAnimales_idAnimales", "FK_idAnimales_idAnimales");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Tratamientos] WHERE (([idTratamientos] = @Original_idTratamien" +
-                "tos) AND ([nombre] = @Original_nombre) AND ([precio] = @Original_precio) AND ([f" +
-                "echa_inicio] = @Original_fecha_inicio) AND ([fecha_fin] = @Original_fecha_fin))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Tratamientos] WHERE (([idTratamientos] = @Original_idTratamientos) AND ([nombre] = @Original_nombre) AND ([precio] = @Original_precio) AND ([fecha_inicio] = @Original_fecha_inicio) AND ([fecha_fin] = @Original_fecha_fin) AND ((@IsNull_FK_idAnimales_idAnimales = 1 AND [FK_idAnimales_idAnimales] IS NULL) OR ([FK_idAnimales_idAnimales] = @Original_FK_idAnimales_idAnimales)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idTratamientos", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idTratamientos", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nombre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_precio", global::System.Data.SqlDbType.Real, 0, global::System.Data.ParameterDirection.Input, 0, 0, "precio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fecha_inicio", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_inicio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fecha_fin", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_fin", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FK_idAnimales_idAnimales", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_idAnimales_idAnimales", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FK_idAnimales_idAnimales", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_idAnimales_idAnimales", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Tratamientos] ([idTratamientos], [nombre], [precio], [fecha_inicio], [fecha_fin]) VALUES (@idTratamientos, @nombre, @precio, @fecha_inicio, @fecha_fin);
-SELECT idTratamientos, nombre, precio, fecha_inicio, fecha_fin FROM Tratamientos WHERE (idTratamientos = @idTratamientos)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Tratamientos] ([idTratamientos], [nombre], [precio], [fecha_inicio], [fecha_fin], [FK_idAnimales_idAnimales]) VALUES (@idTratamientos, @nombre, @precio, @fecha_inicio, @fecha_fin, @FK_idAnimales_idAnimales);
+SELECT idTratamientos, nombre, precio, fecha_inicio, fecha_fin, FK_idAnimales_idAnimales FROM Tratamientos WHERE (idTratamientos = @idTratamientos)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idTratamientos", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idTratamientos", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@precio", global::System.Data.SqlDbType.Real, 0, global::System.Data.ParameterDirection.Input, 0, 0, "precio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_inicio", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_inicio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_fin", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_fin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_idAnimales_idAnimales", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_idAnimales_idAnimales", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Tratamientos] SET [idTratamientos] = @idTratamientos, [nombre] = @nombre, [precio] = @precio, [fecha_inicio] = @fecha_inicio, [fecha_fin] = @fecha_fin WHERE (([idTratamientos] = @Original_idTratamientos) AND ([nombre] = @Original_nombre) AND ([precio] = @Original_precio) AND ([fecha_inicio] = @Original_fecha_inicio) AND ([fecha_fin] = @Original_fecha_fin));
-SELECT idTratamientos, nombre, precio, fecha_inicio, fecha_fin FROM Tratamientos WHERE (idTratamientos = @idTratamientos)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Tratamientos] SET [idTratamientos] = @idTratamientos, [nombre] = @nombre, [precio] = @precio, [fecha_inicio] = @fecha_inicio, [fecha_fin] = @fecha_fin, [FK_idAnimales_idAnimales] = @FK_idAnimales_idAnimales WHERE (([idTratamientos] = @Original_idTratamientos) AND ([nombre] = @Original_nombre) AND ([precio] = @Original_precio) AND ([fecha_inicio] = @Original_fecha_inicio) AND ([fecha_fin] = @Original_fecha_fin) AND ((@IsNull_FK_idAnimales_idAnimales = 1 AND [FK_idAnimales_idAnimales] IS NULL) OR ([FK_idAnimales_idAnimales] = @Original_FK_idAnimales_idAnimales)));
+SELECT idTratamientos, nombre, precio, fecha_inicio, fecha_fin, FK_idAnimales_idAnimales FROM Tratamientos WHERE (idTratamientos = @idTratamientos)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idTratamientos", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idTratamientos", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@precio", global::System.Data.SqlDbType.Real, 0, global::System.Data.ParameterDirection.Input, 0, 0, "precio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_inicio", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_inicio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_fin", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_fin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_idAnimales_idAnimales", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_idAnimales_idAnimales", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idTratamientos", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idTratamientos", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nombre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_precio", global::System.Data.SqlDbType.Real, 0, global::System.Data.ParameterDirection.Input, 0, 0, "precio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fecha_inicio", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_inicio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fecha_fin", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_fin", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FK_idAnimales_idAnimales", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_idAnimales_idAnimales", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FK_idAnimales_idAnimales", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_idAnimales_idAnimales", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -880,8 +929,8 @@ SELECT idTratamientos, nombre, precio, fecha_inicio, fecha_fin FROM Tratamientos
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT idTratamientos, nombre, precio, fecha_inicio, fecha_fin FROM dbo.Tratamien" +
-                "tos";
+            this._commandCollection[0].CommandText = "SELECT idTratamientos, nombre, precio, fecha_inicio, fecha_fin, FK_idAnimales_idA" +
+                "nimales FROM dbo.Tratamientos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -942,7 +991,7 @@ SELECT idTratamientos, nombre, precio, fecha_inicio, fecha_fin FROM Tratamientos
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_idTratamientos, string Original_nombre, float Original_precio, string Original_fecha_inicio, string Original_fecha_fin) {
+        public virtual int Delete(string Original_idTratamientos, string Original_nombre, float Original_precio, string Original_fecha_inicio, string Original_fecha_fin, string Original_FK_idAnimales_idAnimales) {
             if ((Original_idTratamientos == null)) {
                 throw new global::System.ArgumentNullException("Original_idTratamientos");
             }
@@ -968,6 +1017,14 @@ SELECT idTratamientos, nombre, precio, fecha_inicio, fecha_fin FROM Tratamientos
             else {
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_fecha_fin));
             }
+            if ((Original_FK_idAnimales_idAnimales == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_FK_idAnimales_idAnimales));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -988,7 +1045,7 @@ SELECT idTratamientos, nombre, precio, fecha_inicio, fecha_fin FROM Tratamientos
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string idTratamientos, string nombre, float precio, string fecha_inicio, string fecha_fin) {
+        public virtual int Insert(string idTratamientos, string nombre, float precio, string fecha_inicio, string fecha_fin, string FK_idAnimales_idAnimales) {
             if ((idTratamientos == null)) {
                 throw new global::System.ArgumentNullException("idTratamientos");
             }
@@ -1014,6 +1071,12 @@ SELECT idTratamientos, nombre, precio, fecha_inicio, fecha_fin FROM Tratamientos
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(fecha_fin));
             }
+            if ((FK_idAnimales_idAnimales == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(FK_idAnimales_idAnimales));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1034,7 +1097,7 @@ SELECT idTratamientos, nombre, precio, fecha_inicio, fecha_fin FROM Tratamientos
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string idTratamientos, string nombre, float precio, string fecha_inicio, string fecha_fin, string Original_idTratamientos, string Original_nombre, float Original_precio, string Original_fecha_inicio, string Original_fecha_fin) {
+        public virtual int Update(string idTratamientos, string nombre, float precio, string fecha_inicio, string fecha_fin, string FK_idAnimales_idAnimales, string Original_idTratamientos, string Original_nombre, float Original_precio, string Original_fecha_inicio, string Original_fecha_fin, string Original_FK_idAnimales_idAnimales) {
             if ((idTratamientos == null)) {
                 throw new global::System.ArgumentNullException("idTratamientos");
             }
@@ -1060,30 +1123,44 @@ SELECT idTratamientos, nombre, precio, fecha_inicio, fecha_fin FROM Tratamientos
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(fecha_fin));
             }
+            if ((FK_idAnimales_idAnimales == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(FK_idAnimales_idAnimales));
+            }
             if ((Original_idTratamientos == null)) {
                 throw new global::System.ArgumentNullException("Original_idTratamientos");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_idTratamientos));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_idTratamientos));
             }
             if ((Original_nombre == null)) {
                 throw new global::System.ArgumentNullException("Original_nombre");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_nombre));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_nombre));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((float)(Original_precio));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((float)(Original_precio));
             if ((Original_fecha_inicio == null)) {
                 throw new global::System.ArgumentNullException("Original_fecha_inicio");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_fecha_inicio));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_fecha_inicio));
             }
             if ((Original_fecha_fin == null)) {
                 throw new global::System.ArgumentNullException("Original_fecha_fin");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_fecha_fin));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_fecha_fin));
+            }
+            if ((Original_FK_idAnimales_idAnimales == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_FK_idAnimales_idAnimales));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1105,8 +1182,8 @@ SELECT idTratamientos, nombre, precio, fecha_inicio, fecha_fin FROM Tratamientos
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string nombre, float precio, string fecha_inicio, string fecha_fin, string Original_idTratamientos, string Original_nombre, float Original_precio, string Original_fecha_inicio, string Original_fecha_fin) {
-            return this.Update(Original_idTratamientos, nombre, precio, fecha_inicio, fecha_fin, Original_idTratamientos, Original_nombre, Original_precio, Original_fecha_inicio, Original_fecha_fin);
+        public virtual int Update(string nombre, float precio, string fecha_inicio, string fecha_fin, string FK_idAnimales_idAnimales, string Original_idTratamientos, string Original_nombre, float Original_precio, string Original_fecha_inicio, string Original_fecha_fin, string Original_FK_idAnimales_idAnimales) {
+            return this.Update(Original_idTratamientos, nombre, precio, fecha_inicio, fecha_fin, FK_idAnimales_idAnimales, Original_idTratamientos, Original_nombre, Original_precio, Original_fecha_inicio, Original_fecha_fin, Original_FK_idAnimales_idAnimales);
         }
     }
     

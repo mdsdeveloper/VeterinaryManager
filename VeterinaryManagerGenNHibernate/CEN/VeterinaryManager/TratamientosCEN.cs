@@ -95,5 +95,11 @@ public System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.Veteri
 {
         return _ITratamientosCAD.Dame_todos ();
 }
+public void Add_animal (string p_Tratamientos_OID, string p_animales_OID)
+{
+        //Call to TratamientosCAD
+
+        _ITratamientosCAD.Add_animal (p_Tratamientos_OID, p_animales_OID);
+}
 }
 }

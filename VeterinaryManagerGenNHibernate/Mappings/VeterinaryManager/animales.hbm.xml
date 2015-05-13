@@ -39,6 +39,16 @@
 			
 			
 			
+			
+		  			
+						<bag name="Tratamientos" >
+							<key>
+								<column name="[FK_idAnimales_idAnimales]"/>
+					      	</key>
+							<one-to-many class="VeterinaryManagerGenNHibernate.EN.VeterinaryManager.TratamientosEN"/>
+					    </bag>
+					
+					
 					
 					
 					

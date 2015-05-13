@@ -65,6 +65,12 @@ namespace Presentacion
             animal.Visible = true;
         }
 
+        private void tratamientoToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            Tratamientos tratamiento = new Tratamientos();
+            tratamiento.Visible = true;
+        }
+
          
     }
 }

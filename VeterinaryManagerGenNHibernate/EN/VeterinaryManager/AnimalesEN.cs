@@ -59,6 +59,12 @@ private string observaciones;
 
 private int edad;
 
+/**
+ *
+ */
+
+private System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.TratamientosEN> tratamientos;
+
 
 
 
@@ -108,27 +114,33 @@ public virtual int Edad {
 }
 
 
+public virtual System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.TratamientosEN> Tratamientos {
+        get { return tratamientos; } set { tratamientos = value;  }
+}
+
+
 
 
 
 public AnimalesEN()
 {
+        tratamientos = new System.Collections.Generic.List<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.TratamientosEN>();
 }
 
 
 
-public AnimalesEN(string id, string nombre, VeterinaryManagerGenNHibernate.EN.VeterinaryManager.ClientesEN clientes, string categoria, string raza, string sexo, string color, string observaciones, int edad)
+public AnimalesEN(string id, string nombre, VeterinaryManagerGenNHibernate.EN.VeterinaryManager.ClientesEN clientes, string categoria, string raza, string sexo, string color, string observaciones, int edad, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.TratamientosEN> tratamientos)
 {
-        this.init (id, nombre, clientes, categoria, raza, sexo, color, observaciones, edad);
+        this.init (id, nombre, clientes, categoria, raza, sexo, color, observaciones, edad, tratamientos);
 }
 
 
 public AnimalesEN(AnimalesEN animales)
 {
-        this.init (animales.Id, animales.Nombre, animales.Clientes, animales.Categoria, animales.Raza, animales.Sexo, animales.Color, animales.Observaciones, animales.Edad);
+        this.init (animales.Id, animales.Nombre, animales.Clientes, animales.Categoria, animales.Raza, animales.Sexo, animales.Color, animales.Observaciones, animales.Edad, animales.Tratamientos);
 }
 
-private void init (string id, string nombre, VeterinaryManagerGenNHibernate.EN.VeterinaryManager.ClientesEN clientes, string categoria, string raza, string sexo, string color, string observaciones, int edad)
+private void init (string id, string nombre, VeterinaryManagerGenNHibernate.EN.VeterinaryManager.ClientesEN clientes, string categoria, string raza, string sexo, string color, string observaciones, int edad, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.TratamientosEN> tratamientos)
 {
         this.Id = id;
 
@@ -148,6 +160,8 @@ private void init (string id, string nombre, VeterinaryManagerGenNHibernate.EN.V
         this.Observaciones = observaciones;
 
         this.Edad = edad;
+
+        this.Tratamientos = tratamientos;
 }
 
 public override bool Equals (object obj)

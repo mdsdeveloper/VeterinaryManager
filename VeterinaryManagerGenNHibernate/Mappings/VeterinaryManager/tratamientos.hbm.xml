@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="VeterinaryManagerGenNHibernate"
+		                   namespace="VeterinaryManagerGenNHibernate.EN.VeterinaryManager">
+			<class name="TratamientosEN" table="[Tratamientos]">
+						<id name="Id" column="[idTratamientos]"/>
+					<property name="Nombre" type="string"> 
+						<column name="[nombre]"  not-null="true"/>
+					</property>
+					<property name="Precio" type="float"> 
+						<column name="[precio]"  not-null="true"/>
+					</property>
+					<property name="Fecha_inicio" type="string"> 
+						<column name="[fecha_inicio]"  not-null="true"/>
+					</property>
+					<property name="Fecha_fin" type="string"> 
+						<column name="[fecha_fin]"  not-null="true"/>
+					</property>
+			
+			
+			
+			
+			
+			
+		  			
+						<many-to-one name="Animales" class="VeterinaryManagerGenNHibernate.EN.VeterinaryManager.AnimalesEN" >	
+								<column name="[FK_idAnimales_idAnimales]"/>
+						</many-to-one>
+											 					
+					
+					
+					
+					
+					
+					
+		
+		  </class>
+		  
+		  <query name="TratamientosENReadAllHQL">from TratamientosEN</query>
+		  <query name="TratamientosENdame_todosHQL"><![CDATA[FROM TratamientosEN]]></query>
+		</hibernate-mapping>
+	

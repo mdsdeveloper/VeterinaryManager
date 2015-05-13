@@ -27,3 +27,4 @@ C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\VeterinaryManagerGen\Present
 C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\veterinarymanagerGen\Presentacion\obj\x86\Debug\Presentacion.ModificarCliente.resources
 C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\veterinarymanagerGen\Presentacion\obj\x86\Debug\Presentacion.BorrarCliente.resources
 C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\veterinarymanagerGen\Presentacion\obj\x86\Debug\Presentacion.Animales.resources
+C:\Documents and Settings\ooh4riaUser\Desktop\DSS-1\VeterinaryManagerGen\Presentacion\obj\x86\Debug\Presentacion.Tratamientos.resources

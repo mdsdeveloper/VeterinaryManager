@@ -59,7 +59,6 @@ namespace Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TratamientosCAD trataCAD = new TratamientosCAD();
             TratamientosCEN trataCEN = new TratamientosCEN();
 
             if (trataCEN.ReadOID(tbID.Text) == null)
@@ -150,7 +149,7 @@ namespace Presentacion
             }
             else
             {
-                MessageBox.Show("Falta rellenar algún dato");
+                MessageBox.Show("Tienes que editar el tratamiento");
             }
         }
 

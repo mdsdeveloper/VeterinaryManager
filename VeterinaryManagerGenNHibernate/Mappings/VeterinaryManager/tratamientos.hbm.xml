@@ -27,6 +27,17 @@
 								<column name="[FK_idAnimales_idAnimales]"/>
 						</many-to-one>
 											 					
+			
+		  			
+						<bag name="Cobros" table="[tratamientos_cobros]"  >
+							<key>
+									<column name="[FK_idTratamientos_idTratamientos]"/>
+							</key>
+      						<many-to-many class="VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CobrosEN">
+									<column name="[FK_idCobros_idCobros]"/>
+      						</many-to-many>
+    					</bag>
+					
 					
 					
 					

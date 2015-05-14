@@ -41,6 +41,12 @@ private string id;
 
 private VeterinaryManagerGenNHibernate.EN.VeterinaryManager.AnimalesEN animales;
 
+/**
+ *
+ */
+
+private System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CobrosEN> cobros;
+
 
 
 
@@ -75,27 +81,33 @@ public virtual VeterinaryManagerGenNHibernate.EN.VeterinaryManager.AnimalesEN An
 }
 
 
+public virtual System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CobrosEN> Cobros {
+        get { return cobros; } set { cobros = value;  }
+}
+
+
 
 
 
 public TratamientosEN()
 {
+        cobros = new System.Collections.Generic.List<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CobrosEN>();
 }
 
 
 
-public TratamientosEN(string id, string nombre, float precio, string fecha_inicio, string fecha_fin, VeterinaryManagerGenNHibernate.EN.VeterinaryManager.AnimalesEN animales)
+public TratamientosEN(string id, string nombre, float precio, string fecha_inicio, string fecha_fin, VeterinaryManagerGenNHibernate.EN.VeterinaryManager.AnimalesEN animales, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CobrosEN> cobros)
 {
-        this.init (id, nombre, precio, fecha_inicio, fecha_fin, animales);
+        this.init (id, nombre, precio, fecha_inicio, fecha_fin, animales, cobros);
 }
 
 
 public TratamientosEN(TratamientosEN tratamientos)
 {
-        this.init (tratamientos.Id, tratamientos.Nombre, tratamientos.Precio, tratamientos.Fecha_inicio, tratamientos.Fecha_fin, tratamientos.Animales);
+        this.init (tratamientos.Id, tratamientos.Nombre, tratamientos.Precio, tratamientos.Fecha_inicio, tratamientos.Fecha_fin, tratamientos.Animales, tratamientos.Cobros);
 }
 
-private void init (string id, string nombre, float precio, string fecha_inicio, string fecha_fin, VeterinaryManagerGenNHibernate.EN.VeterinaryManager.AnimalesEN animales)
+private void init (string id, string nombre, float precio, string fecha_inicio, string fecha_fin, VeterinaryManagerGenNHibernate.EN.VeterinaryManager.AnimalesEN animales, System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.CobrosEN> cobros)
 {
         this.Id = id;
 
@@ -109,6 +121,8 @@ private void init (string id, string nombre, float precio, string fecha_inicio, 
         this.Fecha_fin = fecha_fin;
 
         this.Animales = animales;
+
+        this.Cobros = cobros;
 }
 
 public override bool Equals (object obj)

@@ -71,6 +71,12 @@ namespace Presentacion
             tratamiento.Visible = true;
         }
 
+        private void servicioToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            Servicios servicio = new Servicios();
+            servicio.Visible = true;
+        }
+
          
     }
 }

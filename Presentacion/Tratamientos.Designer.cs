@@ -30,14 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idTratamientosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechainicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechafinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fKidAnimalesidAnimalesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tratamientosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.veterinaryManagerGenNHibernateDataSet4 = new Presentacion.VeterinaryManagerGenNHibernateDataSet4();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.idAnimalesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.animalesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.veterinaryManagerGenNHibernateDataSet2 = new Presentacion.VeterinaryManagerGenNHibernateDataSet2();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.tbID = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -62,16 +69,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.animalesTableAdapter = new Presentacion.VeterinaryManagerGenNHibernateDataSet2TableAdapters.AnimalesTableAdapter();
             this.tratamientosTableAdapter = new Presentacion.VeterinaryManagerGenNHibernateDataSet4TableAdapters.TratamientosTableAdapter();
-            this.idTratamientosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechainicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechafinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fKidAnimalesidAnimalesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idAnimalesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tratamientosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.veterinaryManagerGenNHibernateDataSet4)).BeginInit();
@@ -100,6 +100,42 @@
             this.dataGridView1.Size = new System.Drawing.Size(647, 223);
             this.dataGridView1.TabIndex = 16;
             // 
+            // idTratamientosDataGridViewTextBoxColumn
+            // 
+            this.idTratamientosDataGridViewTextBoxColumn.DataPropertyName = "idTratamientos";
+            this.idTratamientosDataGridViewTextBoxColumn.HeaderText = "ID_Tratamientos";
+            this.idTratamientosDataGridViewTextBoxColumn.Name = "idTratamientosDataGridViewTextBoxColumn";
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            // 
+            // fechainicioDataGridViewTextBoxColumn
+            // 
+            this.fechainicioDataGridViewTextBoxColumn.DataPropertyName = "fecha_inicio";
+            this.fechainicioDataGridViewTextBoxColumn.HeaderText = "Fecha_Inicio";
+            this.fechainicioDataGridViewTextBoxColumn.Name = "fechainicioDataGridViewTextBoxColumn";
+            // 
+            // fechafinDataGridViewTextBoxColumn
+            // 
+            this.fechafinDataGridViewTextBoxColumn.DataPropertyName = "fecha_fin";
+            this.fechafinDataGridViewTextBoxColumn.HeaderText = "Fecha_Fin";
+            this.fechafinDataGridViewTextBoxColumn.Name = "fechafinDataGridViewTextBoxColumn";
+            // 
+            // fKidAnimalesidAnimalesDataGridViewTextBoxColumn
+            // 
+            this.fKidAnimalesidAnimalesDataGridViewTextBoxColumn.DataPropertyName = "FK_idAnimales_idAnimales";
+            this.fKidAnimalesidAnimalesDataGridViewTextBoxColumn.HeaderText = "ID_Animal";
+            this.fKidAnimalesidAnimalesDataGridViewTextBoxColumn.Name = "fKidAnimalesidAnimalesDataGridViewTextBoxColumn";
+            // 
             // tratamientosBindingSource
             // 
             this.tratamientosBindingSource.DataMember = "Tratamientos";
@@ -123,6 +159,18 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(244, 225);
             this.dataGridView2.TabIndex = 15;
+            // 
+            // idAnimalesDataGridViewTextBoxColumn
+            // 
+            this.idAnimalesDataGridViewTextBoxColumn.DataPropertyName = "idAnimales";
+            this.idAnimalesDataGridViewTextBoxColumn.HeaderText = "ID_Animales";
+            this.idAnimalesDataGridViewTextBoxColumn.Name = "idAnimalesDataGridViewTextBoxColumn";
+            // 
+            // nombreDataGridViewTextBoxColumn1
+            // 
+            this.nombreDataGridViewTextBoxColumn1.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn1.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
             // 
             // animalesBindingSource
             // 
@@ -164,7 +212,7 @@
             this.groupBox2.Size = new System.Drawing.Size(927, 216);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Datos animales";
+            this.groupBox2.Text = "Datos tratamientos";
             // 
             // label7
             // 
@@ -174,18 +222,6 @@
             this.label7.Size = new System.Drawing.Size(20, 13);
             this.label7.TabIndex = 22;
             this.label7.Text = "ID";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label12.Location = new System.Drawing.Point(213, 231);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(387, 17);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Elige el animal que recibe tratamiento y pulsa editar";
             // 
             // tbID
             // 
@@ -403,6 +439,18 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Nombre";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label12.Location = new System.Drawing.Point(213, 231);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(387, 17);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Elige el animal que recibe tratamiento y pulsa editar";
+            // 
             // animalesTableAdapter
             // 
             this.animalesTableAdapter.ClearBeforeFill = true;
@@ -410,54 +458,6 @@
             // tratamientosTableAdapter
             // 
             this.tratamientosTableAdapter.ClearBeforeFill = true;
-            // 
-            // idTratamientosDataGridViewTextBoxColumn
-            // 
-            this.idTratamientosDataGridViewTextBoxColumn.DataPropertyName = "idTratamientos";
-            this.idTratamientosDataGridViewTextBoxColumn.HeaderText = "ID_Tratamientos";
-            this.idTratamientosDataGridViewTextBoxColumn.Name = "idTratamientosDataGridViewTextBoxColumn";
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            // 
-            // fechainicioDataGridViewTextBoxColumn
-            // 
-            this.fechainicioDataGridViewTextBoxColumn.DataPropertyName = "fecha_inicio";
-            this.fechainicioDataGridViewTextBoxColumn.HeaderText = "Fecha_Inicio";
-            this.fechainicioDataGridViewTextBoxColumn.Name = "fechainicioDataGridViewTextBoxColumn";
-            // 
-            // fechafinDataGridViewTextBoxColumn
-            // 
-            this.fechafinDataGridViewTextBoxColumn.DataPropertyName = "fecha_fin";
-            this.fechafinDataGridViewTextBoxColumn.HeaderText = "Fecha_Fin";
-            this.fechafinDataGridViewTextBoxColumn.Name = "fechafinDataGridViewTextBoxColumn";
-            // 
-            // fKidAnimalesidAnimalesDataGridViewTextBoxColumn
-            // 
-            this.fKidAnimalesidAnimalesDataGridViewTextBoxColumn.DataPropertyName = "FK_idAnimales_idAnimales";
-            this.fKidAnimalesidAnimalesDataGridViewTextBoxColumn.HeaderText = "ID_Animal";
-            this.fKidAnimalesidAnimalesDataGridViewTextBoxColumn.Name = "fKidAnimalesidAnimalesDataGridViewTextBoxColumn";
-            // 
-            // idAnimalesDataGridViewTextBoxColumn
-            // 
-            this.idAnimalesDataGridViewTextBoxColumn.DataPropertyName = "idAnimales";
-            this.idAnimalesDataGridViewTextBoxColumn.HeaderText = "ID_Animales";
-            this.idAnimalesDataGridViewTextBoxColumn.Name = "idAnimalesDataGridViewTextBoxColumn";
-            // 
-            // nombreDataGridViewTextBoxColumn1
-            // 
-            this.nombreDataGridViewTextBoxColumn1.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn1.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
             // 
             // Tratamientos
             // 

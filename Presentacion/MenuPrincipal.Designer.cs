@@ -82,14 +82,14 @@
             // 
             this.cerrarToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
-            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.cerrarToolStripMenuItem.Text = "Cerrar";
             this.cerrarToolStripMenuItem.Click += new System.EventHandler(this.cerrarToolStripMenuItem_Click);
             // 
             // guardarToolStripMenuItem
             // 
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.guardarToolStripMenuItem.Text = "Guardar";
             // 
             // toolStripLabel2
@@ -103,7 +103,7 @@
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
@@ -184,6 +184,7 @@
             this.servicioToolStripMenuItem4.Name = "servicioToolStripMenuItem4";
             this.servicioToolStripMenuItem4.Size = new System.Drawing.Size(168, 22);
             this.servicioToolStripMenuItem4.Text = "Servicio";
+            this.servicioToolStripMenuItem4.Click += new System.EventHandler(this.servicioToolStripMenuItem4_Click);
             // 
             // citaToolStripMenuItem3
             // 

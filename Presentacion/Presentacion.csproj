@@ -101,6 +101,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servicios.Designer.cs">
+      <DependentUpon>Servicios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tratamientos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VeterinaryManagerGenNHibernateDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VeterinaryManagerGenNHibernateDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VeterinaryManagerGenNHibernateDataSet5.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Animales.resx">
       <DependentUpon>Animales.cs</DependentUpon>
@@ -163,6 +174,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Servicios.resx">
+      <DependentUpon>Servicios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tratamientos.resx">
       <DependentUpon>Tratamientos.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +244,17 @@
     </None>
     <None Include="VeterinaryManagerGenNHibernateDataSet4.xss">
       <DependentUpon>VeterinaryManagerGenNHibernateDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="VeterinaryManagerGenNHibernateDataSet5.xsc">
+      <DependentUpon>VeterinaryManagerGenNHibernateDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="VeterinaryManagerGenNHibernateDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VeterinaryManagerGenNHibernateDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VeterinaryManagerGenNHibernateDataSet5.xss">
+      <DependentUpon>VeterinaryManagerGenNHibernateDataSet5.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -129,6 +129,14 @@
 	<Compile Include="CEN\VeterinaryManager\TratamientosCEN.cs" />
 	<Compile Include="CAD\VeterinaryManager\ITratamientosCAD.cs" />
 	<Compile Include="CAD\VeterinaryManager\TratamientosCAD.cs" />
+	<Compile Include="EN\VeterinaryManager\ServicioEN.cs" />
+	<Compile Include="CEN\VeterinaryManager\ServicioCEN.cs" />
+	<Compile Include="CAD\VeterinaryManager\IServicioCAD.cs" />
+	<Compile Include="CAD\VeterinaryManager\ServicioCAD.cs" />
+	<Compile Include="EN\VeterinaryManager\CobrosEN.cs" />
+	<Compile Include="CEN\VeterinaryManager\CobrosCEN.cs" />
+	<Compile Include="CAD\VeterinaryManager\ICobrosCAD.cs" />
+	<Compile Include="CAD\VeterinaryManager\CobrosCAD.cs" />
 	
 	
 
@@ -150,6 +158,8 @@
 	<EmbeddedResource Include="Mappings\VeterinaryManager\citas.hbm.xml" />
 	<EmbeddedResource Include="Mappings\VeterinaryManager\animales.hbm.xml" />
 	<EmbeddedResource Include="Mappings\VeterinaryManager\tratamientos.hbm.xml" />
+	<EmbeddedResource Include="Mappings\VeterinaryManager\servicio.hbm.xml" />
+	<EmbeddedResource Include="Mappings\VeterinaryManager\cobros.hbm.xml" />
 	
 	
 

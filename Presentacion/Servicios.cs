@@ -88,5 +88,22 @@ namespace Presentacion
             tbNombre.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
             tbTipo.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();           
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (tbTipo.Text != "" && tbNombre.Text != "" && tbFecha.Text != "")
+            {
+                servicio = new ServicioCEN();
+                i = dataGridView1.CurrentCell.RowIndex;
+                OID = int.Parse(dataGridView1.Rows[i].Cells[0].Value.ToString());
+                servicio.Modify(OID, tbNombre.Text, tbTipo.Text, tbFecha.Text);
+                Dame_Todos();
+                Limpiar();
+            }
+            else
+            {
+                MessageBox.Show("Tienes que editar el servicio");
+            }
+        }
     }
 }

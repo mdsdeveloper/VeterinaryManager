@@ -35,7 +35,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.btBuscar = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.tbFecha = new System.Windows.Forms.TextBox();
@@ -79,7 +78,6 @@
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.groupBox2.Controls.Add(this.tbFecha);
-            this.groupBox2.Controls.Add(this.btBuscar);
             this.groupBox2.Controls.Add(this.tbTipo);
             this.groupBox2.Controls.Add(this.tbNombre);
             this.groupBox2.Controls.Add(this.label5);
@@ -99,7 +97,7 @@
             this.button4.Location = new System.Drawing.Point(3, 190);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(87, 30);
-            this.button4.TabIndex = 20;
+            this.button4.TabIndex = 15;
             this.button4.Text = "Limpiar";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -109,7 +107,7 @@
             this.button3.Location = new System.Drawing.Point(56, 121);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(87, 30);
-            this.button3.TabIndex = 4;
+            this.button3.TabIndex = 14;
             this.button3.Text = "Borrar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -119,7 +117,7 @@
             this.button1.Location = new System.Drawing.Point(56, 13);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 30);
-            this.button1.TabIndex = 16;
+            this.button1.TabIndex = 11;
             this.button1.Text = "Insertar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -129,25 +127,17 @@
             this.button2.Location = new System.Drawing.Point(56, 49);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(87, 30);
-            this.button2.TabIndex = 3;
+            this.button2.TabIndex = 12;
             this.button2.Text = "Actualizar";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // btBuscar
-            // 
-            this.btBuscar.Location = new System.Drawing.Point(505, 68);
-            this.btBuscar.Name = "btBuscar";
-            this.btBuscar.Size = new System.Drawing.Size(87, 30);
-            this.btBuscar.TabIndex = 5;
-            this.btBuscar.Text = "Listar";
-            this.btBuscar.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(56, 85);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(87, 30);
-            this.button5.TabIndex = 6;
+            this.button5.TabIndex = 13;
             this.button5.Text = "Editar";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -157,7 +147,7 @@
             this.button6.Location = new System.Drawing.Point(108, 190);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(87, 30);
-            this.button6.TabIndex = 7;
+            this.button6.TabIndex = 16;
             this.button6.Text = "Cerrar";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -166,21 +156,21 @@
             // 
             this.tbFecha.Location = new System.Drawing.Point(130, 78);
             this.tbFecha.Name = "tbFecha";
-            this.tbFecha.Size = new System.Drawing.Size(310, 20);
+            this.tbFecha.Size = new System.Drawing.Size(462, 20);
             this.tbFecha.TabIndex = 10;
             // 
             // tbTipo
             // 
             this.tbTipo.Location = new System.Drawing.Point(130, 51);
             this.tbTipo.Name = "tbTipo";
-            this.tbTipo.Size = new System.Drawing.Size(310, 20);
+            this.tbTipo.Size = new System.Drawing.Size(462, 20);
             this.tbTipo.TabIndex = 9;
             // 
             // tbNombre
             // 
             this.tbNombre.Location = new System.Drawing.Point(130, 25);
             this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(310, 20);
+            this.tbNombre.Size = new System.Drawing.Size(462, 20);
             this.tbNombre.TabIndex = 8;
             // 
             // label5
@@ -297,7 +287,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btBuscar;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox tbFecha;

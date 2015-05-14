@@ -174,8 +174,6 @@ namespace Presentacion
         {
             if (tbNombre.Text != "" && tbPrecio.Text != "" && tbFecha_Ini.Text != "" && tbFecha_fin.Text != "" && tbID.Text != "")
             {
-                
-                TratamientosCAD trataCAD = new TratamientosCAD();
                 TratamientosCEN trataCEN = new TratamientosCEN();
                 int i;
                 i = dataGridView1.CurrentCell.RowIndex;

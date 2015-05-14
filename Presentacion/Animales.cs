@@ -215,26 +215,27 @@ namespace Presentacion
             if (tbNombre1.Text != "")
             {
                 animalCEN = new AnimalesCEN();
-                IList<AnimalesEN> listaClientes = new List<AnimalesEN>();                
+                IList<AnimalesEN> listaAnimales = new List<AnimalesEN>();                
                 String[] listaDatos = new String[8];
                 // Aquí obtengo todos los animales con el nombre que le paso por parametro.
-                listaClientes = animalCEN.Dame_por_nombre(tbNombre1.Text);
+                listaAnimales = animalCEN.Dame_por_nombre(tbNombre1.Text.ToString());
                 // Aquí controlo que no sea la lista vacia.
-                if (listaClientes.Count != 0)
+                if (listaAnimales.Count != 0)
                 {                    
                     DataTable table = new DataTable();
                     //Aquí recorro la lista de datos y inserto los datos de cada cliente recuperado de la base de datos.
-                    for (int i = 0; i < listaClientes.Count; i++)
+                    for (int i = 0; i < listaAnimales.Count; i++)
                     {
-                        listaDatos[0] = listaClientes[i].Id;
-                        listaDatos[1] = listaClientes[i].Nombre;
-                        listaDatos[2] = listaClientes[i].Categoria;
-                        listaDatos[3] = listaClientes[i].Raza;
-                        listaDatos[4] = listaClientes[i].Sexo;
-                        listaDatos[5] = listaClientes[i].Color;
-                        listaDatos[6] = listaClientes[i].Observaciones;
-                        listaDatos[7] = listaClientes[i].Edad.ToString();
-                      //  listaDatos[8] = listaClientes[i].Clientes.Nombre;     !!!!!!!!!!!!! problemas al insertar una clave ajena de la tabla cliente... LazyException
+
+                        listaDatos[0] = listaAnimales[i].Id;
+                        listaDatos[1] = listaAnimales[i].Nombre;
+                        listaDatos[2] = listaAnimales[i].Categoria;
+                        listaDatos[3] = listaAnimales[i].Raza;
+                        listaDatos[4] = listaAnimales[i].Sexo;
+                        listaDatos[5] = listaAnimales[i].Color;
+                        listaDatos[6] = listaAnimales[i].Observaciones;
+                        listaDatos[7] = listaAnimales[i].Edad.ToString();
+                        //  listaDatos[8] = listaAnimales[i].Clientes.Nombre;     !!!!!!!!!!!!! problemas al insertar una clave ajena de la tabla cliente... LazyException
                         //Aquí lo que hago es añadir una nueva linea en el dataGridView cada
                         // vez que encuentro un cliente en la base de datos para poder añadirlo 
                         // al dataGridView.

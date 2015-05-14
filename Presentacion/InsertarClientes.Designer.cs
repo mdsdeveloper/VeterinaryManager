@@ -30,11 +30,11 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.tbEmail = new System.Windows.Forms.TextBox();
             this.tbFecha = new System.Windows.Forms.TextBox();
             this.tbDni = new System.Windows.Forms.TextBox();
             this.tbDireccion = new System.Windows.Forms.TextBox();
             this.tbTelefono = new System.Windows.Forms.TextBox();
-            this.tbEmail = new System.Windows.Forms.TextBox();
             this.tbApellidos = new System.Windows.Forms.TextBox();
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,12 +44,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.tbEmail);
             this.groupBox1.Controls.Add(this.tbFecha);
@@ -76,13 +78,20 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(414, 275);
+            this.button1.Location = new System.Drawing.Point(301, 272);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 30);
             this.button1.TabIndex = 14;
             this.button1.Text = "Insertar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.Location = new System.Drawing.Point(142, 184);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(246, 21);
+            this.tbEmail.TabIndex = 12;
             // 
             // tbFecha
             // 
@@ -111,13 +120,6 @@
             this.tbTelefono.Name = "tbTelefono";
             this.tbTelefono.Size = new System.Drawing.Size(246, 21);
             this.tbTelefono.TabIndex = 10;
-            // 
-            // tbEmail
-            // 
-            this.tbEmail.Location = new System.Drawing.Point(142, 184);
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(246, 21);
-            this.tbEmail.TabIndex = 12;
             // 
             // tbApellidos
             // 
@@ -196,6 +198,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(403, 272);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(87, 30);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Salir";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // InsertarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,5 +244,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
     }
 }

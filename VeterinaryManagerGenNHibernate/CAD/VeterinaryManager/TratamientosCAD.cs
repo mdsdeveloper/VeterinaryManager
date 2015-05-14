@@ -252,5 +252,36 @@ public void Add_animal (string p_Tratamientos_OID, string p_animales_OID)
                 SessionClose ();
         }
 }
+
+public System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.TratamientosEN> Dame_por_nombre (string p_nombre)
+{
+        System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.TratamientosEN> result;
+        try
+        {
+                SessionInitializeTransaction ();
+                //String sql = @"FROM TratamientosEN self where select tra FROM TratamientosEN tra where tra.Nombre=:p_nombre";
+                //IQuery query = session.CreateQuery(sql);
+                IQuery query = (IQuery)session.GetNamedQuery ("TratamientosENdame_por_nombreHQL");
+                query.SetParameter ("p_nombre", p_nombre);
+
+                result = query.List<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.TratamientosEN>();
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is VeterinaryManagerGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new VeterinaryManagerGenNHibernate.Exceptions.DataLayerException ("Error in TratamientosCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+
+        return result;
+}
 }
 }

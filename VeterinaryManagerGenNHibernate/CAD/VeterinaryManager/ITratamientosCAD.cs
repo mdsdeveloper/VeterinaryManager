@@ -26,5 +26,7 @@ System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryMan
 
 
 void Add_animal (string p_Tratamientos_OID, string p_animales_OID);
+
+System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.TratamientosEN> Dame_por_nombre (string p_nombre);
 }
 }

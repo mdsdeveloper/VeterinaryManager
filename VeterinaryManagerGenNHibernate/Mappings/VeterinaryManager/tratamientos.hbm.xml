@@ -38,5 +38,6 @@
 		  
 		  <query name="TratamientosENReadAllHQL">from TratamientosEN</query>
 		  <query name="TratamientosENdame_todosHQL"><![CDATA[FROM TratamientosEN]]></query>
+		  <query name="TratamientosENdame_por_nombreHQL"><![CDATA[select tra FROM TratamientosEN tra where tra.Nombre=:p_nombre]]></query>
 		</hibernate-mapping>
 	

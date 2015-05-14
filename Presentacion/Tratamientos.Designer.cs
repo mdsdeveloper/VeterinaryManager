@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tratamientosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.veterinaryManagerGenNHibernateDataSet4 = new Presentacion.VeterinaryManagerGenNHibernateDataSet4();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.animalesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.veterinaryManagerGenNHibernateDataSet2 = new Presentacion.VeterinaryManagerGenNHibernateDataSet2();
@@ -61,8 +63,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.animalesTableAdapter = new Presentacion.VeterinaryManagerGenNHibernateDataSet2TableAdapters.AnimalesTableAdapter();
-            this.veterinaryManagerGenNHibernateDataSet4 = new Presentacion.VeterinaryManagerGenNHibernateDataSet4();
-            this.tratamientosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tratamientosTableAdapter = new Presentacion.VeterinaryManagerGenNHibernateDataSet4TableAdapters.TratamientosTableAdapter();
             this.idTratamientosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,18 +73,19 @@
             this.idAnimalesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tratamientosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.veterinaryManagerGenNHibernateDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.veterinaryManagerGenNHibernateDataSet2)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.veterinaryManagerGenNHibernateDataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tratamientosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idTratamientosDataGridViewTextBoxColumn,
@@ -99,9 +100,20 @@
             this.dataGridView1.Size = new System.Drawing.Size(647, 223);
             this.dataGridView1.TabIndex = 16;
             // 
+            // tratamientosBindingSource
+            // 
+            this.tratamientosBindingSource.DataMember = "Tratamientos";
+            this.tratamientosBindingSource.DataSource = this.veterinaryManagerGenNHibernateDataSet4;
+            // 
+            // veterinaryManagerGenNHibernateDataSet4
+            // 
+            this.veterinaryManagerGenNHibernateDataSet4.DataSetName = "VeterinaryManagerGenNHibernateDataSet4";
+            this.veterinaryManagerGenNHibernateDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dataGridView2
             // 
             this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idAnimalesDataGridViewTextBoxColumn,
@@ -126,7 +138,6 @@
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.tbID);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.button3);
@@ -170,7 +181,7 @@
             this.label12.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label12.Location = new System.Drawing.Point(490, 197);
+            this.label12.Location = new System.Drawing.Point(213, 231);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(387, 17);
             this.label12.TabIndex = 8;
@@ -299,6 +310,7 @@
             this.btBuscar.TabIndex = 5;
             this.btBuscar.Text = "Buscar";
             this.btBuscar.UseVisualStyleBackColor = true;
+            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
             // 
             // tbNombre1
             // 
@@ -395,16 +407,6 @@
             // 
             this.animalesTableAdapter.ClearBeforeFill = true;
             // 
-            // veterinaryManagerGenNHibernateDataSet4
-            // 
-            this.veterinaryManagerGenNHibernateDataSet4.DataSetName = "VeterinaryManagerGenNHibernateDataSet4";
-            this.veterinaryManagerGenNHibernateDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tratamientosBindingSource
-            // 
-            this.tratamientosBindingSource.DataMember = "Tratamientos";
-            this.tratamientosBindingSource.DataSource = this.veterinaryManagerGenNHibernateDataSet4;
-            // 
             // tratamientosTableAdapter
             // 
             this.tratamientosTableAdapter.ClearBeforeFill = true;
@@ -412,49 +414,49 @@
             // idTratamientosDataGridViewTextBoxColumn
             // 
             this.idTratamientosDataGridViewTextBoxColumn.DataPropertyName = "idTratamientos";
-            this.idTratamientosDataGridViewTextBoxColumn.HeaderText = "idTratamientos";
+            this.idTratamientosDataGridViewTextBoxColumn.HeaderText = "ID_Tratamientos";
             this.idTratamientosDataGridViewTextBoxColumn.Name = "idTratamientosDataGridViewTextBoxColumn";
             // 
             // nombreDataGridViewTextBoxColumn
             // 
             this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
             // 
             // precioDataGridViewTextBoxColumn
             // 
             this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
             this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
             // 
             // fechainicioDataGridViewTextBoxColumn
             // 
             this.fechainicioDataGridViewTextBoxColumn.DataPropertyName = "fecha_inicio";
-            this.fechainicioDataGridViewTextBoxColumn.HeaderText = "fecha_inicio";
+            this.fechainicioDataGridViewTextBoxColumn.HeaderText = "Fecha_Inicio";
             this.fechainicioDataGridViewTextBoxColumn.Name = "fechainicioDataGridViewTextBoxColumn";
             // 
             // fechafinDataGridViewTextBoxColumn
             // 
             this.fechafinDataGridViewTextBoxColumn.DataPropertyName = "fecha_fin";
-            this.fechafinDataGridViewTextBoxColumn.HeaderText = "fecha_fin";
+            this.fechafinDataGridViewTextBoxColumn.HeaderText = "Fecha_Fin";
             this.fechafinDataGridViewTextBoxColumn.Name = "fechafinDataGridViewTextBoxColumn";
             // 
             // fKidAnimalesidAnimalesDataGridViewTextBoxColumn
             // 
             this.fKidAnimalesidAnimalesDataGridViewTextBoxColumn.DataPropertyName = "FK_idAnimales_idAnimales";
-            this.fKidAnimalesidAnimalesDataGridViewTextBoxColumn.HeaderText = "FK_idAnimales_idAnimales";
+            this.fKidAnimalesidAnimalesDataGridViewTextBoxColumn.HeaderText = "ID_Animal";
             this.fKidAnimalesidAnimalesDataGridViewTextBoxColumn.Name = "fKidAnimalesidAnimalesDataGridViewTextBoxColumn";
             // 
             // idAnimalesDataGridViewTextBoxColumn
             // 
             this.idAnimalesDataGridViewTextBoxColumn.DataPropertyName = "idAnimales";
-            this.idAnimalesDataGridViewTextBoxColumn.HeaderText = "idAnimales";
+            this.idAnimalesDataGridViewTextBoxColumn.HeaderText = "ID_Animales";
             this.idAnimalesDataGridViewTextBoxColumn.Name = "idAnimalesDataGridViewTextBoxColumn";
             // 
             // nombreDataGridViewTextBoxColumn1
             // 
             this.nombreDataGridViewTextBoxColumn1.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn1.HeaderText = "nombre";
+            this.nombreDataGridViewTextBoxColumn1.HeaderText = "Nombre";
             this.nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
             // 
             // Tratamientos
@@ -463,6 +465,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(949, 469);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -473,6 +476,8 @@
             this.Text = "Tratamientos";
             this.Load += new System.EventHandler(this.Tratamientos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tratamientosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.veterinaryManagerGenNHibernateDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.veterinaryManagerGenNHibernateDataSet2)).EndInit();
@@ -480,9 +485,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.veterinaryManagerGenNHibernateDataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tratamientosBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

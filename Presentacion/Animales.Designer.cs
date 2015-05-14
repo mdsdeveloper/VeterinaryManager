@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,6 +65,14 @@
             this.animalesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.animalesTableAdapter1 = new Presentacion.VeterinaryManagerGenNHibernateDataSet2TableAdapters.AnimalesTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.animalesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.veterinaryManagerGenNHibernateDataSet22 = new Presentacion.VeterinaryManagerGenNHibernateDataSet2();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.veterinaryManagerGenNHibernateDataSet3 = new Presentacion.VeterinaryManagerGenNHibernateDataSet3();
+            this.veterinaryManagerGenNHibernateDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clientesTableAdapter = new Presentacion.VeterinaryManagerGenNHibernateDataSet3TableAdapters.ClientesTableAdapter();
+            this.label12 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,9 +82,6 @@
             this.observacionesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.animalesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.veterinaryManagerGenNHibernateDataSet22 = new Presentacion.VeterinaryManagerGenNHibernateDataSet2();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dniClientesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,11 +89,6 @@
             this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.veterinaryManagerGenNHibernateDataSet3 = new Presentacion.VeterinaryManagerGenNHibernateDataSet3();
-            this.veterinaryManagerGenNHibernateDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clientesTableAdapter = new Presentacion.VeterinaryManagerGenNHibernateDataSet3TableAdapters.ClientesTableAdapter();
-            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.animalesBindingSource)).BeginInit();
@@ -437,60 +438,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(949, 225);
             this.dataGridView1.TabIndex = 2;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "idAnimales";
-            this.dataGridViewTextBoxColumn1.HeaderText = "idAnimales";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "nombre";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "categoria";
-            this.dataGridViewTextBoxColumn3.HeaderText = "categoria";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "raza";
-            this.dataGridViewTextBoxColumn4.HeaderText = "raza";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "sexo";
-            this.dataGridViewTextBoxColumn5.HeaderText = "sexo";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "color";
-            this.dataGridViewTextBoxColumn6.HeaderText = "color";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // observacionesDataGridViewTextBoxColumn
-            // 
-            this.observacionesDataGridViewTextBoxColumn.DataPropertyName = "observaciones";
-            this.observacionesDataGridViewTextBoxColumn.HeaderText = "observaciones";
-            this.observacionesDataGridViewTextBoxColumn.Name = "observacionesDataGridViewTextBoxColumn";
-            // 
-            // edadDataGridViewTextBoxColumn
-            // 
-            this.edadDataGridViewTextBoxColumn.DataPropertyName = "edad";
-            this.edadDataGridViewTextBoxColumn.HeaderText = "edad";
-            this.edadDataGridViewTextBoxColumn.Name = "edadDataGridViewTextBoxColumn";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "FK_dniClientes_idClientes";
-            this.dataGridViewTextBoxColumn7.HeaderText = "FK_dniClientes_idClientes";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
             // animalesBindingSource1
             // 
             this.animalesBindingSource1.DataMember = "Animales";
@@ -514,52 +461,18 @@
             this.direccionDataGridViewTextBoxColumn,
             this.fechaDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.clientesBindingSource;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView2.Location = new System.Drawing.Point(118, 323);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(747, 186);
             this.dataGridView2.TabIndex = 3;
-            // 
-            // dniClientesDataGridViewTextBoxColumn
-            // 
-            this.dniClientesDataGridViewTextBoxColumn.DataPropertyName = "dniClientes";
-            this.dniClientesDataGridViewTextBoxColumn.HeaderText = "dniClientes";
-            this.dniClientesDataGridViewTextBoxColumn.Name = "dniClientesDataGridViewTextBoxColumn";
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            // 
-            // apellidoDataGridViewTextBoxColumn
-            // 
-            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "apellido";
-            this.apellidoDataGridViewTextBoxColumn.HeaderText = "apellido";
-            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // telefonoDataGridViewTextBoxColumn
-            // 
-            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono";
-            this.telefonoDataGridViewTextBoxColumn.HeaderText = "telefono";
-            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
-            // 
-            // direccionDataGridViewTextBoxColumn
-            // 
-            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "direccion";
-            this.direccionDataGridViewTextBoxColumn.HeaderText = "direccion";
-            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
-            // 
-            // fechaDataGridViewTextBoxColumn
-            // 
-            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "fecha";
-            this.fechaDataGridViewTextBoxColumn.HeaderText = "fecha";
-            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
             // 
             // clientesBindingSource
             // 
@@ -586,6 +499,102 @@
             this.label12.Size = new System.Drawing.Size(387, 17);
             this.label12.TabIndex = 4;
             this.label12.Text = "Elige un cliente propietario del animal y pulsa editar";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "idAnimales";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID_Animales";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "nombre";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "categoria";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Categoria";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "raza";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Raza";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "sexo";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Sexo";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "color";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Color";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // observacionesDataGridViewTextBoxColumn
+            // 
+            this.observacionesDataGridViewTextBoxColumn.DataPropertyName = "observaciones";
+            this.observacionesDataGridViewTextBoxColumn.HeaderText = "Observaciones";
+            this.observacionesDataGridViewTextBoxColumn.Name = "observacionesDataGridViewTextBoxColumn";
+            // 
+            // edadDataGridViewTextBoxColumn
+            // 
+            this.edadDataGridViewTextBoxColumn.DataPropertyName = "edad";
+            this.edadDataGridViewTextBoxColumn.HeaderText = "Edad";
+            this.edadDataGridViewTextBoxColumn.Name = "edadDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "FK_dniClientes_idClientes";
+            this.dataGridViewTextBoxColumn7.HeaderText = "ID_Cliente";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dniClientesDataGridViewTextBoxColumn
+            // 
+            this.dniClientesDataGridViewTextBoxColumn.DataPropertyName = "dniClientes";
+            this.dniClientesDataGridViewTextBoxColumn.HeaderText = "DNI_Clientes";
+            this.dniClientesDataGridViewTextBoxColumn.Name = "dniClientesDataGridViewTextBoxColumn";
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // apellidoDataGridViewTextBoxColumn
+            // 
+            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "apellido";
+            this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido";
+            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // telefonoDataGridViewTextBoxColumn
+            // 
+            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono";
+            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            // 
+            // direccionDataGridViewTextBoxColumn
+            // 
+            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "direccion";
+            this.direccionDataGridViewTextBoxColumn.HeaderText = "Direccion";
+            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            // 
+            // fechaDataGridViewTextBoxColumn
+            // 
+            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "fecha";
+            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
             // 
             // Animales
             // 
@@ -666,6 +675,16 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private VeterinaryManagerGenNHibernateDataSet2 veterinaryManagerGenNHibernateDataSet22;
         private System.Windows.Forms.BindingSource animalesBindingSource1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.BindingSource veterinaryManagerGenNHibernateDataSetBindingSource;
+        private VeterinaryManagerGenNHibernateDataSet3 veterinaryManagerGenNHibernateDataSet3;
+        private System.Windows.Forms.BindingSource clientesBindingSource;
+        private VeterinaryManagerGenNHibernateDataSet3TableAdapters.ClientesTableAdapter clientesTableAdapter;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox tbCliente;
+        private System.Windows.Forms.Button btInsertarDueño;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -675,11 +694,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn observacionesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.BindingSource veterinaryManagerGenNHibernateDataSetBindingSource;
-        private VeterinaryManagerGenNHibernateDataSet3 veterinaryManagerGenNHibernateDataSet3;
-        private System.Windows.Forms.BindingSource clientesBindingSource;
-        private VeterinaryManagerGenNHibernateDataSet3TableAdapters.ClientesTableAdapter clientesTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dniClientesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
@@ -687,10 +701,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox tbCliente;
-        private System.Windows.Forms.Button btInsertarDueño;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label12;
     }
 }

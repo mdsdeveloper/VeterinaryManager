@@ -101,5 +101,9 @@ public void Add_animal (string p_Tratamientos_OID, string p_animales_OID)
 
         _ITratamientosCAD.Add_animal (p_Tratamientos_OID, p_animales_OID);
 }
+public System.Collections.Generic.IList<VeterinaryManagerGenNHibernate.EN.VeterinaryManager.TratamientosEN> Dame_por_nombre (string p_nombre)
+{
+        return _ITratamientosCAD.Dame_por_nombre (p_nombre);
+}
 }
 }

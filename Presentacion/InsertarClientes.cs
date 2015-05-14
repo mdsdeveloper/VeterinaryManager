@@ -60,5 +60,10 @@ namespace Presentacion
             tbDni.Text = "";
             tbFecha.Text = "";
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

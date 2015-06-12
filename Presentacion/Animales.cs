@@ -249,8 +249,11 @@ namespace Presentacion
                             nuevoDataGrid.Rows[i].Cells[j].Value = listaDatos[j].ToString();
                             //dataGridView1.Rows[i].Cells[j].Value = listaDatos[j].ToString();
                             j++;
+                            
                         }
-                    } // Fin for                 
+                        
+                    } // Fin for          
+                    
                 }
                 else
                 {

@@ -27,7 +27,9 @@ namespace Presentacion
                 if (usuarioCEN.Login(tbContraseña.Text, tbUsuario.Text) == true)
                 {
                     MessageBox.Show("Bienvenido a Veterinary Manager");
-                    MenuPrincipal menu = new MenuPrincipal();
+                  //  MenuPrincipal menu = new MenuPrincipal();   Aqui he puesto el mdi para que vuelva a ser lo de siempre tengo que descomentar
+                  //  menu.Visible = true;
+                    MDIFomulario1 menu = new MDIFomulario1();
                     menu.Visible = true;
                     this.Dispose(false);
                 }

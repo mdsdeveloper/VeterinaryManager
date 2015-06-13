@@ -63,17 +63,11 @@
     <Compile Include="Animales.Designer.cs">
       <DependentUpon>Animales.cs</DependentUpon>
     </Compile>
-    <Compile Include="BorrarCliente.cs">
+    <Compile Include="Cliente1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BorrarCliente.Designer.cs">
-      <DependentUpon>BorrarCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EditarCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditarCliente.Designer.cs">
-      <DependentUpon>EditarCliente.cs</DependentUpon>
+    <Compile Include="Cliente1.Designer.cs">
+      <DependentUpon>Cliente1.cs</DependentUpon>
     </Compile>
     <Compile Include="InsertarClientes.cs">
       <SubType>Form</SubType>
@@ -87,17 +81,11 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuPrincipal.cs">
+    <Compile Include="MDIFomulario1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuPrincipal.Designer.cs">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarCliente.Designer.cs">
-      <DependentUpon>ModificarCliente.cs</DependentUpon>
+    <Compile Include="MDIFomulario1.Designer.cs">
+      <DependentUpon>MDIFomulario1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -146,11 +134,8 @@
     <EmbeddedResource Include="Animales.resx">
       <DependentUpon>Animales.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BorrarCliente.resx">
-      <DependentUpon>BorrarCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditarCliente.resx">
-      <DependentUpon>EditarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Cliente1.resx">
+      <DependentUpon>Cliente1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InsertarClientes.resx">
       <DependentUpon>InsertarClientes.cs</DependentUpon>
@@ -158,11 +143,8 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuPrincipal.resx">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarCliente.resx">
-      <DependentUpon>ModificarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="MDIFomulario1.resx">
+      <DependentUpon>MDIFomulario1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -266,6 +248,21 @@
       <Project>{66C66636-FD6A-4A3F-A7C5-FE88BBA117AF}</Project>
       <Name>VeterinaryManagerGenNHibernate</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pet.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pet1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pet2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portada.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\principal.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

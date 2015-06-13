@@ -64,11 +64,7 @@ namespace Presentacion
                         button3.Enabled = false;
                         groupBox1.Enabled = false;
                     }
-                    
-                     //   Limpiar();
-                        //  this.animalesTableAdapter.Fill(this.veterinaryManagerGenNHibernateDataSet22.Animales);
-                     //   this.animalesTableAdapter1.Fill(this.veterinaryManagerGenNHibernateDataSet22.Animales);
-                    Dame_Todos();
+                   Dame_Todos();
                 }
                 else
                 {
